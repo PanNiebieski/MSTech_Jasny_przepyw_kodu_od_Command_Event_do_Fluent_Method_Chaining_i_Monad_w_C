@@ -68,6 +68,8 @@
 .tc-4 { color: var(--c-title-4); }
 .tc-5 { color: var(--c-title-5); }
 .tc-6 { color: var(--c-title-6); }
+.tc-7 { color: var(--c-title-7); }
+
 
 /* Old aliases */
 .titlec1 { color: var(--c-title-1); }
@@ -213,3 +215,5 @@
 .blue2  { background-color: rgb(0, 153, 255) !important; color: white !important; padding: 5px; }
 .blue3  { background-color: rgb(0, 225, 255); color: white; padding: 5px; }
 .bold   { font-weight: bold; background-color: rgb(255, 255, 62) !important; }
+.bold2   { font-weight: bold; background-color: var(--tag-darkestblue) !important; color:white !important; border-color: rgb(36, 36, 36) !important; }
+.bold3   { font-weight: bold; background-color: var(--tag-darkpurple) !important; color:white !important; border-color: rgb(36, 36, 36) !important; }

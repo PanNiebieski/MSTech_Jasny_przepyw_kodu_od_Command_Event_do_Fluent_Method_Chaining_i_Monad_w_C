@@ -15,7 +15,7 @@
     <!-- 2. NEW: Refactored main.css (replaces old main.css, badge.css, front-page.css) -->
     <!--    Put all 9 files (_tokens.css, _base.css, etc.) in the same folder.        -->
     <!--    main.css uses @import to load them in the correct order.                   -->
-    <link rel="stylesheet" href="vendors/shower-CezaryWalenciuk/styles/main.css" />
+    <link rel="stylesheet" href="vendors/shower-walenciuk/styles/main.css" />
 
     <!-- 3. Prism.js syntax highlighting (unchanged) -->
     <link rel="stylesheet" href="vendors/prism/custom-prism.css" />
@@ -58,7 +58,7 @@
                 <span class="tc-7">Jasny przepływ kodu :</span><br />
                 <span class="tc-6">od Command-Event </span><br />
                 <span class="tc-7">do Fluent Method Chaining</span><br />
-                <span class="tc-6">i Monad w C#</span>
+                <span class="tc-8">i Monad w C#</span>
             </strong></h2>
             <h2><a href="https://twitter.com/WalenciukC">@walenciukC</a></h2>
         </div>
@@ -66,151 +66,613 @@
             <img src="images/my-avatar.jpg" alt="Speaker" />
         </div>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 2 — Shout slide (dark + teal tag)                       ║
-         ║  NEW:   theme-dark tag-teal                                    ║
-         ║  OLD:   creamGrey kkk                                         ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal">
+    <section class="slide theme-dark tag-darkpurple  decor-corners2">
         <span class="shout colors"><span>
-            Nowy system klas tematycznych
+            Ilośc kodu generowanego i "tylko" czytanego kodu rośnie
         </span></span>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 3 — Splitpoint layout (icon left + bullets right)       ║
-         ║  NEW:   layout-splitpoint > split-image + split-text           ║
-         ║  OLD:   grid-container-slidepoint > SlidePointImage + Text     ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal fullscreen">
+    <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens6.jpg" alt="screenshot" />
+        </figure>
+    </section>
+        <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens.jpg" alt="screenshot" />
+        </figure>
+    </section>
+            <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens2.jpg" alt="screenshot" />
+        </figure>
+    </section>
+                <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens3.jpg" alt="screenshot" />
+        </figure>
+    </section>
+                    <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens4.jpg" alt="screenshot" />
+        </figure>
+    </section>
+        <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/tokens5.jpg" alt="screenshot" />
+        </figure>
+    </section>
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                Jak napisać kod, który będzie zrozumiały nawet dla twojego product ownwera czy scrum mastera?
+            </p>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkpurple  decor-corners2">
+        <span class="shout colors"><span>
+            Jak czytam cudzą aplikacje?
+        </span></span>
+    </section>
+    <section class="slide theme-dark tag-darkpurple  decor-corners2">
+        <span class="shout colors"><span>
+            Od momentu startu? Bo chcemy mieć pełny obraz
+        </span></span>
+    </section>
+    <section class="slide theme-dark tag-darkblue fullscreen">
         <div class="layout-splitpoint">
             <div class="split-image">
-                <img title="icon" src="pictures/iconsFr/online-learning.png" />
+                <img title="icon" src="pictures/icons/01.png" />
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
-                    <li class="bold">Główny punkt slajdu</li>
+                    <li class="bold2">Od momentu startu</li>
                     <ol class="nonumbers">
-                        <li class="next">Pierwszy podpunkt z animacją</li>
-                        <li class="next">Drugi podpunkt z animacją</li>
-                        <li class="next">Trzeci podpunkt z animacją</li>
+                        <li class="next">Dla aplikacji konsolowej to Program.cs i co robi 1,2,3</li>
+                        <li class="next">Dla REST/gRPC API a patrzę w endpointy</li>
+                        <li class="next">Dla kolejki Kafka, RabbitMQ patrzę na handlery</li>
                     </ol>
                 </ol>
             </div>
         </div>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 4 — Shout slide with different tag colors               ║
-         ║  Shows: tag-blue, tag-green, tag-purple, tag-gold              ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-blue">
+    <section class="slide theme-dark tag-darkpurple  decor-corners2">
         <span class="shout colors"><span>
-            Tag: blue
+            Potem chcemy się skupić na konkretny fragment, który nas interesuje
         </span></span>
     </section>
-
-    <section class="slide theme-dark tag-green">
+    <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/vertical_slice_architecture.png" alt="screenshot" />
+        </figure>
+    </section>
+        <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/02.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Vertical Slices mówi nam, że przy pomocy</li>
+                    <ol class="nonumbers">
+                        <li class="next">Układów projektów</li>
+                        <li class="next">Nazwy Folderów</li>
+                        <li class="next">Nazw klas</li>
+                        <li class="next">Nazw metod</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Tag: green
+            Chcemy pokazać konkretny przepływ kodu który kogoś będzie interesował
         </span></span>
     </section>
-
-    <section class="slide theme-dark tag-purple">
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 1:</Strong>
+            </p>
+            <p>
+                Nazwy klas, metod, folderów, projektów kierują nasz wzrok i mózg do konkretnego fragmentu kodu, który nas interesuje
+            </p>
+        </div>
+    </section>
+            <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                W Domain Driven Design mamy "Ubiquitous Language" wspólny język biznesem, a programistami
+                <br /><br />
+                Tak żebyś wiedział gdzie szukać tego w kodzie gdy ktoś biznesowo opisze Ci problem z daną aplikacją
+            </p>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Tag: purple
+            A teraz opowiem o tym co mi nie wyszło
         </span></span>
     </section>
-
-    <section class="slide theme-dark tag-gold">
+    <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/03.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Chciałem kiedyś napisać czytelny kod przy pomocy</li>
+                    <ol class="nonumbers">
+                        <li class="next">MediatR</li>
+                        <li class="next">Który był przepływem klas Command -> Event -> Command -> CompletedEvent</li>
+                        <li class="next">Każda klasa robiła tylko jedną rzecz</li>
+                        <li class="next">Każdy błędny przypadek "pojedyńczy" i "czałościowy" miał swoje własny Event</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+            <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 2:</Strong>
+            </p>
+            <p>
+                Spodobało mi się to, ze w tym kodzie nie wyrzucałem wyjątków.
+                <br /><br />
+                Miałem "Rezultaty" które mówiły mi czy dane polecenie się wykonało czy nie i co poszło nie tak
+                <br /><br />
+                Nie sterowałem przepływem wyjątkami
+            </p>
+        </div>
+    </section>
+        <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/04.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Pierwszy problem</li>
+                    <ol class="nonumbers">
+                        <li class="next">Klas było za dużo</li>
+                        <li class="next">Aby ratować to podjeście wywaliłem z przepływu klasy dla zdarzeń</li>
+                        <li class="next">Ale nawet maja same klasy Command nadal klas było zbyt dużo</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 3:</Strong>
+            </p>
+            <p>
+                "Zdarzenia" na pewno nie powinny sterować przepływem.<br /><br />
+                "Zdarzenia" czy strumień zdarzeń powinno dać możliwość podpinania dodatkowe kodu
+                gdy dane polecenie się wykonało.
+            </p>
+        </div>
+    </section>
+            <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/05.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Drugi problem</li>
+                    <ol class="nonumbers">
+                        <li class="next">Przepływ klas które polecenie wywołuje które nie było oczywiste</li>
+                        <li class="next">Wymagało przejrzenia każdej klasy</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 4:</Strong>
+            </p>
+            <p>
+                Nie ważne "jak" muszę mieć w 1 miejscu w kodzie widok przepływu kodu
+            </p>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/06.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Trzeci problem</li>
+                    <ol class="nonumbers">
+                        <li class="next">Trzeba było dużo refactorować jeśli doszło nowe polecenie po środku</li>
+                        <li class="next">Typy zwracane wymuszały specyficzną kolejność działań</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 5:</Strong>
+            </p>
+            <p>
+                O ile to możliwe stworzyć polecenia jak klocki Lego które mogę dowolnie zmieniać kolejność.
+                <br /><br /> Chociaż wiem, że ma to swoja cenę
+            </p>
+        </div>
+    </section>
+                    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 6:</Strong>
+            </p>
+            <p>
+                Zobaczyłem potrzebę podziału na przeływu per "jeden elementy", per "cały batch", a w tym rozwiązaniu średnio to było widać
+            </p>
+        </div>
+    </section>
+   <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Tag: gold
+            Kod nie był czytelny
         </span></span>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 5 — Gradient background                                 ║
-         ║  NEW:   theme-gradient-purple                                  ║
-         ║  OLD:   creamPPPGragient                                       ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-gradient-purple">
+       <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Gradient: purple → magenta
+            ale jako to przecież użyłem MediatR
         </span></span>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 6 — Gradient green                                      ║
-         ║  NEW:   theme-gradient-green                                   ║
-         ║  OLD:   creamGGGragient                                        ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-gradient-green">
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                O ile po nazwie można było wszystko znaleźć to najbardziej bolesne było brak czytelności zrozumienia przepływu kodu
+            </p>
+        </div>
+    </section>
+            <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/07.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Co chce od mojego kodu</li>
+                    <ol class="nonumbers">
+                        <li class="next">W jednym miejscu widzieć cały przepływ kodu</li>
+                        <li class="next">Zwracać zawsze "rezultaty" i nie sterować aplikacji wyjątkami</li>
+                        <li class="next">Zmieniać kolejność działań bez konieczności zmiany struktury kodu</li>
+                        <li class="next">Jeśli trzeba emitować zdarzenia aby łatwo było dodać warstwe logującą oraz statystki</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+                <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/08.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Co chce od mojego kodu</li>
+                    <ol class="nonumbers">
+                        <li class="next">Świadomość tego, że coś będzie się dla listy elementów, a coś dla pojeduńczego elementu</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="slide theme-black" style="background-color:white">
+        <figure>
+            <img class="cover" src="pictures/railwayMY.png" alt="screenshot" />
+        </figure>
+    </section>
+                        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+               Zaraz to naprawdę nie wyjątków
+            </p>
+            <p>
+                Wyjątki można wyrzucać tylko gdy nastąpił błąd krytyczny i chcecie wyłączyć bądź zabloować całą aplikację 
+            </p>
+        </div>
+    </section>
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+               Warto stworzyć sobie "wajhę", która będzie wrzucała wyjątki zamiast błędnych "rezultatów", aby debugowało się wygodniej
+            </p>
+        </div>
+    </section>
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Scentralizowane i widoczny przepływ kodu to jest to</Strong>
+            </p>
+            <p>
+               To usunie potrzebę kminienia jak projekty, foldery, pliki powinny być ułożone, bo będzie to widać w 1 miejscu w starcie aplikacji
+            </p>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/09.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Od momentu startu</li>
+                    <ol class="nonumbers">
+                        <li class="next">Dla aplikacji konsolowej to Program.cs i co robi 1,2,3</li>
+                        <li class="next">Dla REST/gRPC API a patrzę w endpointy</li>
+                        <li class="next">Dla kolejki Kafka, RabbitMQ patrzę na handlery</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Gradient: green → purple
+            To zobaczmy jak może to zrealizować w kodzie
         </span></span>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 7 — Conic gradient                                      ║
-         ║  NEW:   theme-conic-cool                                       ║
-         ║  OLD:   conicG2                                                ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-conic-cool">
+    <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/10.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Przykład demo</li>
+                    <ol class="nonumbers">
+                        <li class="next">Będzie dostawać listę linków do plików CSV</li>
+                        <li class="next">Coś przejdzie przez proces coś nie przejdzie, coś przefiltruje wszystkie elementy i musimy wiedzieć co i dlaczego</li>
+                        <li class="next">Wydzielić kod na powtarzający się na framework i potrzebny potok</li>
+                        <li class="next">Proces nie będzie liniowy</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+        <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Conic gradient: cool
+                Istnieje dużo sposobów aby to napisać
         </span></span>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 8 — Solid theme variants                                ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-happy">
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Theme: happy (turkusowy)
+                Nie ma jednego właściwego rozwiązania
         </span></span>
     </section>
-
-    <section class="slide theme-cream">
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                <strong>Wniosek 7:</Strong>
+            </p>
+            <p>
+               Nie ma co się trzymać sztywno pewnych zasadach. Dla Railway Oriented programing by nam powiedział, 
+               że metody muszą się nazywać "Bind", "Map", "Match" i mieć konkretne sygnatury. 
+               <br /><br />
+               albo mieć klasy "Maybe", "Either"
+               <br/><br />
+               Ale to nie jest ważne, ważne jest żeby mieć czytelny przepływ kodu
+            </p>
+        </div>
+    </section>
+        <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+               Tutaj wstaw wykład na temat "Monad"
+            </p>
+            <p>
+                Jednak wiem, że ten "wykład" nic nie będzie wnosić
+            </p>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Theme: cream (ciepły)
+            Oto mój przykład
         </span></span>
     </section>
-
-    <section class="slide theme-dark-green">
-        <span class="shout colors"><span>
-            Theme: dark-green (memory)
-        </span></span>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 9 — Code slide with layout-code grid                    ║
-         ║  NEW:   layout-code > code-header + code-body                  ║
-         ║  OLD:   grid-container > HeaderTitle + PlaceCodeHere            ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide prism over bhgry">
+            <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Program.cs — przykładowy kod</h2>
+                <h2>Pipeline CSV File z klasami statycznymi</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 20px; overflow: hidden;">
-                    <code style="line-height: 20px !important;" class="language-cs">
-                        using System;
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        var filePipeline = Flow.Start()
+                            .Then(StartTimingCommand.Run(bus))
+                            .Then(OpenFileCommand.Run(bus))
+                            .Then(ParseCsvCommand.Run(bus))
+                            .Then(ValidateRowsCommand.Run(bus, app.Rules))
+                            .Then(DeduplicationCommand.Run(bus))
+                            .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
+                                .When(&quot;Orders&quot;,   ctx =&gt; ctx.Schema == &quot;Orders&quot;,   pipelineOrdersBranch)
+                                .When(&quot;Sales&quot;,    ctx =&gt; ctx.Schema == &quot;Sales&quot;,    pipelineSalesBranch)
+                                .When(&quot;Users&quot;,    ctx =&gt; ctx.Schema == &quot;Users&quot;,    pipelineUsersBranch)
+                                .When(&quot;Products&quot;, ctx =&gt; ctx.Schema == &quot;Products&quot;, pipelineProductsBranch))
+                            .ThenWaitForAll(&quot;Enrichment&quot;,
+                                GeoLookupCommand.Run(bus),
+                                AuditStampCommand.Run(bus))
+                            .Then(MapEntitiesCommand.Run(bus))
+                            .Then(SaveBatchCommand.Run(bus))
+                            .Build();
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+        <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        var filePipeline = Flow.Start()
+                            .Then(new TimingCommand(bus))
+                            .Then(new OpenFileCommand(bus))
+                            .Then(new ParseCsvCommand(bus))
+                            .Then(new ValidateRowsCommand(bus, app.Rules))
+                            .Then(new DeduplicationCommand(bus))
+                            .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
+                                .When(&quot;Orders&quot;,   ctx =&gt; ctx.Schema == &quot;Orders&quot;,   ordersBranch)
+                                .When(&quot;Sales&quot;,    ctx =&gt; ctx.Schema == &quot;Sales&quot;,    salesBranch)
+                                .When(&quot;Users&quot;,    ctx =&gt; ctx.Schema == &quot;Users&quot;,    usersBranch)
+                                .When(&quot;Products&quot;, ctx =&gt; ctx.Schema == &quot;Products&quot;, productsBranch))
+                            .ThenWaitForAll(&quot;Enrichment&quot;,
+                                new GeoLookupCommand(bus),      // np. geolokalizacja regionu
+                                new AuditStampCommand(bus))     // np. audit timestamp
+                            .Then(new MapEntitiesCommand(bus))
+                            .Then(new SaveBatchCommand(bus))
+                            .Build();
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        var flow = Flow.Start()
 
-                        namespace Demo
+                            // cross-cutting
+                            .Then&lt;StartTimingCommand&gt;()
+                            // wsp&#243;lne kroki wejściowe
+                            .Then&lt;OpenFileCSVCommand&gt;()                           // → ctx.FileContext
+                            .Then&lt;ParseCsvCommand&gt;()                           // → ctx.ParsedFile
+                            .Then&lt;ValidateRowsCommand&gt;()                       // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;DeduplicationCommand&gt;()                      // → ctx.ValidatedFile  | ctx.NoItemsReason
+
+                            // rozgałęzienie per schemat
+                            .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
+                                .When(&quot;Orders&quot;,   ctx =&gt; ctx.FileContext?.Schema == &quot;Orders&quot;,
+                                    then =&gt; then.Then&lt;CalcOrderTotalsCommand&gt;())
+                                .When(&quot;Sales&quot;,    ctx =&gt; ctx.FileContext?.Schema == &quot;Sales&quot;,
+                                    then =&gt; then.Then&lt;CurrencyConvertCommand&gt;())
+                                .When(&quot;Users&quot;,    ctx =&gt; ctx.FileContext?.Schema == &quot;Users&quot;,
+                                    then =&gt; then.Then&lt;ValidateEmailCommand&gt;())               // | ctx.NoItemsReason
+                                .When(&quot;Products&quot;, ctx =&gt; ctx.FileContext?.Schema == &quot;Products&quot;,
+                                    then =&gt; then.Then&lt;ValidateStockCommand&gt;()))
+
+                            // wsp&#243;lne kroki wyjściowe
+                            .Then&lt;MapEntitiesCommand&gt;()                        // → ctx.Entities
+
+                            // r&#243;wnoległe wzbogacenie
+                            .ThenWaitForAll&lt;GeoLookupCommand, AuditStampCommand&gt;(&quot;Enrichment&quot;)
+
+                            .Then&lt;SaveBatchCommand&gt;()                          // → ctx.ImportResult
+
+                            // BuildScoped — każde wywołanie = nowy scope DI
+                            .BuildScoped(services);
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        var filePipeline = Flow.Start()
+                            .Then(new TimingCommand(bus))
+                            .Then(new OpenFileCommand(bus))
+                            .Then(new ParseCsvCommand(bus))
+                            .Then(new ValidateRowsCommand(bus, app.Rules))
+                            .Then(new DeduplicationCommand(bus))
+                            .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
+                                .When(&quot;Orders&quot;,   ctx =&gt; ctx.Schema == &quot;Orders&quot;,   ordersBranch)
+                                .When(&quot;Sales&quot;,    ctx =&gt; ctx.Schema == &quot;Sales&quot;,    salesBranch)
+                                .When(&quot;Users&quot;,    ctx =&gt; ctx.Schema == &quot;Users&quot;,    usersBranch)
+                                .When(&quot;Products&quot;, ctx =&gt; ctx.Schema == &quot;Products&quot;, productsBranch))
+                            .ThenWaitForAll(&quot;Enrichment&quot;,
+                                new GeoLookupCommand(bus),      // np. geolokalizacja regionu
+                                new AuditStampCommand(bus))     // np. audit timestamp
+                            .Then(new MapEntitiesCommand(bus))
+                            .Then(new SaveBatchCommand(bus))
+                            .Build();
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+                <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public class BatchPipeline
                         {
-                            public class HelloWorld
+                            private readonly ScopedFlow _flow;
+                            private readonly IPipelineEventBus _bus;
+
+                            public BatchPipeline(ScopedFlow flow, IPipelineEventBus bus)
                             {
-                                public static void Main(string[] args)
+                                _flow = flow;
+                                _bus = bus;
+                            }
+
+                            public async Task&lt;Result&lt;BatchReport&gt;&gt; ProcessBatchAsync(IEnumerable&lt;string&gt; filePaths)
+                            {
+                                var paths = filePaths.ToArray();
+
+                                var missing = paths.Where(p =&gt; !File.Exists(p)).ToArray();
+                                if (missing.Length &gt; 0)
+                                    return Result&lt;BatchReport&gt;.Fail(
+                                        $&quot;Paths not found: {string.Join(&quot;, &quot;, missing.Select(Path.GetFileName))}&quot;);
+
+                                var imports  = new List&lt;ImportResult&gt;();
+                                var errors   = new List&lt;FileError&gt;();
+                                var skipped  = new List&lt;FileSkipped&gt;();
+
+                                foreach (var path in paths)
                                 {
-                                    Console.WriteLine("Hello from refactored Shower!");
-                                    Console.WriteLine("Tę prezentację napędza:");
-                                    Console.WriteLine("  - _tokens.css  → kolory");
-                                    Console.WriteLine("  - _themes.css  → tła slajdów");
-                                    Console.WriteLine("  - _layouts.css → siatki");
-                                    Console.ReadKey();
+                                    Console.WriteLine($&quot;\n  Plik: {Path.GetFileName(path)}&quot;);
+
+                                    var ctx = new PipelineContext { FilePath = path };
+                                    await _flow.RunAsync(ctx);
+
+                                    if (ctx.Failed)
+                                        errors.Add(new FileError(path, ctx.Error!));
+                                    else if (ctx.IsEmpty)
+                                        skipped.Add(new FileSkipped(path, ctx.NoItemsReason!));
+                                    else
+                                        imports.Add(ctx.ImportResult!);
+
+                                    ctx.Trace.Dump();
                                 }
+
+                                _bus.Publish(new PipelineEvent.BatchCompleted(
+                                    paths, imports.Count, errors.Count));
+
+                                return Result&lt;BatchReport&gt;.Ok(new BatchReport(
+                                    Total: paths.Length,
+                                    Succeeded: imports.Count,
+                                    Skipped: skipped.Count,
+                                    Failed: errors.Count,
+                                    Imports: imports,
+                                    SkippedFiles: skipped,
+                                    Errors: errors));
                             }
                         }
                     </code>
@@ -218,351 +680,1713 @@
             </div>
         </div>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 10 — Code slide with answer panel                       ║
-         ║  NEW:   layout-code-answer > code-header + code-body +         ║
-         ║         code-answer                                            ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide prism over bhgry">
-        <div class="layout-code-answer">
+                <section class="slide prism over bhgry">
+        <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pytanie i odpowiedź</h2>
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 18px; overflow: hidden;">
-                    <code style="line-height: 18px !important;" class="language-cs">
-                        var builder = WebApplication.CreateBuilder(args);
-                        builder.Services.AddControllers();
-                        var app = builder.Build();
-                        app.MapControllers();
-                        app.Run();
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public abstract record PipelineEvent(string FilePath, DateTime Timestamp)
+                        {
+                            public record StepStarted(
+                                string FilePath, string StepName
+                            ) : PipelineEvent(FilePath, DateTime.UtcNow);
+
+                            public record StepCompleted(
+                                string FilePath, string StepName, TimeSpan Duration, string Detail
+                            ) : PipelineEvent(FilePath, DateTime.UtcNow);
+
+                            public record StepFailed(
+                                string FilePath, string StepName, string Error
+                            ) : PipelineEvent(FilePath, DateTime.UtcNow);
+
+                            public record StepNoItems(
+                                string FilePath, string StepName, string Reason
+                            ) : PipelineEvent(FilePath, DateTime.UtcNow);
+
+                            public record FileCompleted(
+                                string FilePath, int RowsSaved, int RowsSkipped
+                            ) : PipelineEvent(FilePath, DateTime.UtcNow);
+
+                            public record BatchCompleted(
+                                string[] FilePaths, int Succeeded, int Failed
+                            ) : PipelineEvent(&quot;batch&quot;, DateTime.UtcNow);
+                        }
+
+                        public interface IPipelineEventBus
+                        {
+                            void Publish(PipelineEvent evt);
+                            IDisposable Subscribe(Action&lt;PipelineEvent&gt; handler);
+                        }
+
+                        public class PipelineEventBus : IPipelineEventBus
+                        {
+                            private readonly List&lt;Action&lt;PipelineEvent&gt;&gt; _handlers = [];
+
+                            public void Publish(PipelineEvent evt)
+                            {
+                                foreach (var handler in _handlers)
+                                    handler(evt);
+                            }
+
+                            public IDisposable Subscribe(Action&lt;PipelineEvent&gt; handler)
+                            {
+                                _handlers.Add(handler);
+                                return new Unsubscriber(() =&gt; _handlers.Remove(handler));
+                            }
+
+                            private sealed class Unsubscriber(Action onDispose) : IDisposable
+                            {
+                                public void Dispose() =&gt; onDispose();
+                            }
+                        }
+
                     </code>
                 </pre>
             </div>
-            <div class="code-answer">
-                <div class="question">
-                    <h3>Co robi ten kod?</h3>
-                </div>
-                <div class="response">
-                    Tworzy minimalną aplikację ASP.NET Core z kontrolerami.
-                </div>
-            </div>
         </div>
     </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 11 — Full-bleed image slide                             ║
-         ║  (unchanged — Shower's native .cover works)                    ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-black">
-        <h2 class="shout" style="font-size: 80px;">Slajd ze zdjęciem</h2>
-        <!-- <figure>
-            <img class="cover" src="pictures/screenshot.png" alt="screenshot" />
-        </figure> -->
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 12 — Splitpoint layout with different tag               ║
-         ║  Demonstrates composability: same layout, different theme      ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-blue fullscreen">
-        <div class="layout-splitpoint">
-            <div class="split-image">
-                <img title="icon" src="pictures/iconsFr/contract.png" />
-            </div>
-            <div class="split-text">
-                <ol class="nonumbers">
-                    <li class="bold">Kompozycja klas</li>
-                    <ol class="nonumbers">
-                        <li class="next">Ten sam layout-splitpoint</li>
-                        <li class="next">Ale inny tag-blue zamiast tag-teal</li>
-                        <li class="next">Zero dodatkowego CSS</li>
-                    </ol>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 13 — Smaller font shout                                 ║
-         ║  Uses utility class: text-heading-md (replaces smallerfont2)   ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal">
-        <span class="shout colors text-heading-md"><span>
-            Mniejszy tekst dzięki klasie .text-heading-md (zastępuje .smallerfont2)
-        </span></span>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — TWO-ICON LAYOUT (layout-icons-2)                      ║
-         ║  Title top, two images side by side, labels below               ║
-         ║  Screenshot ref: "Bez EventSourcing / Z EventSourcing"          ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark-purple fullscreen">
-        <div class="layout-icons-2">
-            <div class="icons-title">
-                <h3>Chcemy mieć aplikacje z dwoma ścieżkami</h3>
-            </div>
-            <div class="icon-1">
-                <img src="pictures/iconsFr/BADCQRS.png" alt="Bez EventSourcing" />
-            </div>
-            <div class="icon-2">
-                <img src="pictures/iconsFr/FluentValidation.png" alt="Z EventSourcing" />
-            </div>
-            <div class="label-1">
-                <h3>Bez EventSourcing</h3>
-            </div>
-            <div class="label-2">
-                <h3>Z EventSourcing</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — SPLITPOINT-LIST (layout-splitpoint-list)              ║
-         ║  Image left, compact list with many items right                 ║
-         ║  Screenshot ref: "Jakie paczki NuGet? (Spoiler)"               ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark-green fullscreen">
-        <div class="layout-splitpoint-list">
-            <div class="split-image">
-                <img src="pictures/iconsFr/biblioteki.png" alt="packages" />
-            </div>
-            <div class="split-text">
-                <ol class="nonumbers">
-                    <li class="bold">Jakie paczki NuGet? (Spoiler)</li>
-                    <li>MediatR</li>
-                    <li>AutoMapper</li>
-                    <li>Fluent Validation</li>
-                    <li>Swagger UI</li>
-                    <li>Dapper (zamiast EF Core)</li>
-                    <li>Newtonsoft.Json do serializacji</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — THREE-ICON LAYOUT (layout-icons-3)                    ║
-         ║  3 columns: image + title + subtitle each                       ║
-         ║  Screenshot ref: "CQRS / Różne Modele / Każdy"                 ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark-blue fullscreen">
-        <div class="layout-icons-3">
-            <div class="icon-1">
-                <img src="pictures/iconsFr/contract.png" alt="CQRS" />
-            </div>
-            <div class="icon-2">
-                <img src="pictures/iconsFr/nswag2.png" alt="Modele" />
-            </div>
-            <div class="icon-3">
-                <img src="pictures/iconsFr/d3.png" alt="Odpowiedzialność" />
-            </div>
-            <div class="label-1">
-                <h3>Command-Query Responsibility Segregation</h3>
-            </div>
-            <div class="label-2">
-                <h3>Różne Modele</h3>
-                <p>Command Do Aktualizacji Danych<br/>Query Do Odczytu</p>
-            </div>
-            <div class="label-3">
-                <h3>Każdy</h3>
-                <p>Ma Swoją Odpowiedzialność</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — FOUR-ICON LAYOUT (layout-icons-4)                     ║
-         ║  Title top, 4 images in a row, labels below                     ║
-         ║  Screenshot ref: "Czy twoja wiedza jest na czasie"              ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark-purple fullscreen">
-        <div class="layout-icons-4">
-            <div class="icons-title">
-                <h3>Czy twoja wiedza jest na czasie.</h3>
-            </div>
-            <div class="icon-1">
-                <img src="pictures/iconsFr/online-learning.png" alt="Praktyki" />
-            </div>
-            <div class="icon-2">
-                <img src="pictures/iconsFr/biblioteki.png" alt="NuGet" />
-            </div>
-            <div class="icon-3">
-                <img src="pictures/iconsFr/nswag2.png" alt="Architektura" />
-            </div>
-            <div class="icon-4">
-                <img src="pictures/iconsFr/d2.png" alt="Testowalna" />
-            </div>
-            <div class="label-1">
-                <h3>Najlepsze Praktyki?</h3>
-            </div>
-            <div class="label-2">
-                <h3>Paczki NuGet?</h3>
-            </div>
-            <div class="label-3">
-                <h3>Jasna Architektura</h3>
-            </div>
-            <div class="label-4">
-                <h3>Testowalna, Łatwa Do Zarządzania</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — COLORED TILES (layout-tiles)                          ║
-         ║  Title + grid of colored rectangles with text                   ║
-         ║  Screenshot ref: "Ważne zasady projektowe"                      ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark-purple fullscreen">
-        <div class="layout-tiles">
-            <div class="tiles-title">
-                <h3>Ważne zasady projektowe</h3>
-            </div>
-            <div class="tile sq-orange"><span>Dependency Inversion</span></div>
-            <div class="tile sq-blue"><span>Seperation of Concerns</span></div>
-            <div class="tile sq-pink"><span>Single Responsibility</span></div>
-            <div class="tile sq-green"><span>DRY</span></div>
-            <div class="tile sq-gray"><span>Persistence Ignorance</span></div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — SPLITPOINT-MIXED (layout-splitpoint-mixed)            ║
-         ║  Image left, grouped items right with yellow section headers    ║
-         ║  Screenshot ref: "Paczka NuGet Fluent Validation"               ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark fullscreen">
-        <div class="layout-splitpoint-mixed">
-            <div class="split-image">
-                <img src="pictures/iconsFr/FluentValidation.png" alt="Fluent Validation" />
-            </div>
-            <div class="split-text">
-                <ol class="nonumbers">
-                    <li class="bold">Paczka NuGet "Fluent Validation"</li>
-                    <li>Używa ona wyrażenia lambda i stylu</li>
-                    <li>extension method</li>
-                    <li class="bold">Może być użyty w projekcie Core</li>
-                    <li>RequestHandler</li>
-                    <li>IRequestHandler</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE — HIGHLIGHT DEMO (all hl-* classes)                     ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal raised">
-        <h2 style="border-color: var(--tag-teal);">Podkreślenia tekstu (hl-*)</h2>
-        <ol class="nonumbers">
-            <li><span class="hl-red">hl-red</span> czerwony tekst na czerwonym tle</li>
-            <li><span class="hl-green">hl-green</span> zielony highlight</li>
-            <li><span class="hl-orange">hl-orange</span> pomarańczowy accent (#FF6525)</li>
-            <li><span class="hl-blue">hl-blue</span> turkusowy (#2096BE)</li>
-            <li><span class="hl-blue-bright">hl-blue-bright</span> jasny niebieski</li>
-            <li><span class="hl-blue-cyan">hl-blue-cyan</span> cyjan</li>
-            <li><span class="hl-purple">hl-purple</span> fioletowy</li>
-            <li><span class="hl-black">hl-black</span> czarny</li>
-        </ol>
-    </section>
-
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 14 — BACKWARDS COMPATIBILITY: old classes still work    ║
-         ║  This proves the migration is safe                             ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide creamGrey kkk">
-        <span class="shout colors"><span>
-            Stara klasa "creamGrey kkk" — nadal działa!
-        </span></span>
-    </section>
-
-    <section class="slide creamGrey kkk fullscreen">
-        <div class="grid-container-slidepoint">
-            <div class="SlidePointImage">
-                <img title="icon" src="pictures/iconsFr/biblioteki.png" />
-            </div>
-            <div class="SlidePointText">
-                <ol class="nonumbers">
-                    <li class="bold">Stary HTML — bez zmian</li>
-                    <ol class="nonumbers">
-                        <li class="next">grid-container-slidepoint ✓</li>
-                        <li class="next">SlidePointImage / SlidePointText ✓</li>
-                        <li class="next">Wszystko renderuje się identycznie</li>
-                    </ol>
-                </ol>
-            </div>
-        </div>
-    </section>
-
-    <!-- Old gradient alias -->
-    <section class="slide conicG">
-        <span class="shout colors"><span>
-            Stara klasa "conicG" — też działa
-        </span></span>
-    </section>
-
-    <!-- Old code grid -->
     <section class="slide prism over bhgry">
-        <div class="grid-container">
-            <div class="HeaderTitle GG">
-                <h2 class="headerCODE GG">Stary grid-container</h2>
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
-            <div class="PlaceCodeHere canscroll">
-                <pre style="font-size: 20px; overflow: hidden;">
-                    <code style="line-height: 20px !important;" class="language-cs">
-                        // Stare klasy CSS nadal działają
-                        // HeaderTitle, PlaceCodeHere, headerCODE
-                        // — wszystkie mają aliasy w nowych plikach
-                        Console.WriteLine("Backwards compatible!");
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public static class EventSubscribers
+                        {
+                            /// &lt;summary&gt;
+                            /// Loguje każdy krok na konsolę z ikonami i kolorami.
+                            /// &lt;/summary&gt;
+                            public static Action&lt;PipelineEvent&gt; ConsoleLogger =&gt; evt =&gt;
+                            {
+                                switch (evt)
+                                {
+                                    case PipelineEvent.StepStarted e:
+                                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                                        Console.WriteLine($&quot;    => {e.StepName}...&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.StepCompleted e:
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.Write($&quot;    OK {e.StepName,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {e.Duration.TotalMilliseconds,6:F1}ms  {e.Detail}&quot;);
+                                        break;
+
+                                    case PipelineEvent.StepFailed e:
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine($&quot;    OH NO {e.StepName,-22} {e.Error}&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.StepNoItems e:
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine($&quot;    ○ {e.StepName,-22} {e.Reason}&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.FileCompleted e:
+                                        Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine($&quot;    => {Path.GetFileName(e.FilePath)}: &quot; +
+                                                        $&quot;{e.RowsSaved} saved, {e.RowsSkipped} skipped&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.BatchCompleted e:
+                                        Console.WriteLine();
+                                        Console.ForegroundColor = e.Failed == 0 ? ConsoleColor.Green : ConsoleColor.Yellow;
+                                        Console.WriteLine($&quot;    Batch: {e.Succeeded} ok / {e.Failed} errors &quot; +
+                                                        $&quot;({e.FilePaths.Length} total)&quot;);
+                                        Console.ResetColor();
+                                        break;
+                                }
+                            };
+
+                            /// &lt;summary&gt;
+                            /// Zbiera metryki do analizy — czasy krok&#243;w, error rate itp.
+                            /// &lt;/summary&gt;
+                            public class MetricsCollector
+                            {
+                                private readonly List&lt;PipelineEvent.StepCompleted&gt; _completed = [];
+                                private readonly List&lt;PipelineEvent.StepFailed&gt; _failed = [];
+
+                                public IReadOnlyList&lt;PipelineEvent.StepCompleted&gt; Completed =&gt; _completed;
+                                public IReadOnlyList&lt;PipelineEvent.StepFailed&gt; Failed =&gt; _failed;
+
+                                public Action&lt;PipelineEvent&gt; Handler =&gt; evt =&gt;
+                                {
+                                    if (evt is PipelineEvent.StepCompleted sc) _completed.Add(sc);
+                                    if (evt is PipelineEvent.StepFailed sf) _failed.Add(sf);
+                                };
+
+                                public void PrintSummary()
+                                {
+                                    Console.WriteLine(&quot;\n── Metrics ──────────────────────────────&quot;);
+                                    var byStep = _completed.GroupBy(c =&gt; c.StepName);
+                                    foreach (var group in byStep)
+                                    {
+                                        var avg = group.Average(c =&gt; c.Duration.TotalMilliseconds);
+                                        var max = group.Max(c =&gt; c.Duration.TotalMilliseconds);
+                                        Console.WriteLine($&quot;  {group.Key,-22} avg={avg:F1}ms  max={max:F1}ms  n={group.Count()}&quot;);
+                                    }
+                                    Console.WriteLine($&quot;  Errors: {_failed.Count}&quot;);
+                                }
+                            }
+                        }
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+        <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public static class EventSubscribers
+                        {
+                            /// &lt;summary&gt;
+                            /// Loguje każdy krok na konsolę z ikonami i kolorami.
+                            /// &lt;/summary&gt;
+                            public static Action&lt;PipelineEvent&gt; ConsoleLogger =&gt; evt =&gt;
+                            {
+                                switch (evt)
+                                {
+                                    case PipelineEvent.StepStarted e:
+                                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                                        Console.WriteLine($&quot;    => {e.StepName}...&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.StepCompleted e:
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.Write($&quot;    OK {e.StepName,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {e.Duration.TotalMilliseconds,6:F1}ms  {e.Detail}&quot;);
+                                        break;
+
+                                    case PipelineEvent.StepFailed e:
+                                        Console.ForegroundColor = ConsoleColor.Red;
+                                        Console.WriteLine($&quot;    OH NO {e.StepName,-22} {e.Error}&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.StepNoItems e:
+                                        Console.ForegroundColor = ConsoleColor.Yellow;
+                                        Console.WriteLine($&quot;    ○ {e.StepName,-22} {e.Reason}&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.FileCompleted e:
+                                        Console.ForegroundColor = ConsoleColor.Cyan;
+                                        Console.WriteLine($&quot;    => {Path.GetFileName(e.FilePath)}: &quot; +
+                                                        $&quot;{e.RowsSaved} saved, {e.RowsSkipped} skipped&quot;);
+                                        Console.ResetColor();
+                                        break;
+
+                                    case PipelineEvent.BatchCompleted e:
+                                        Console.WriteLine();
+                                        Console.ForegroundColor = e.Failed == 0 ? ConsoleColor.Green : ConsoleColor.Yellow;
+                                        Console.WriteLine($&quot;    Batch: {e.Succeeded} ok / {e.Failed} errors &quot; +
+                                                        $&quot;({e.FilePaths.Length} total)&quot;);
+                                        Console.ResetColor();
+                                        break;
+                                }
+                            };
+
+                            /// &lt;summary&gt;
+                            /// Zbiera metryki do analizy — czasy krok&#243;w, error rate itp.
+                            /// &lt;/summary&gt;
+                            public class MetricsCollector
+                            {
+                                private readonly List&lt;PipelineEvent.StepCompleted&gt; _completed = [];
+                                private readonly List&lt;PipelineEvent.StepFailed&gt; _failed = [];
+
+                                public IReadOnlyList&lt;PipelineEvent.StepCompleted&gt; Completed =&gt; _completed;
+                                public IReadOnlyList&lt;PipelineEvent.StepFailed&gt; Failed =&gt; _failed;
+
+                                public Action&lt;PipelineEvent&gt; Handler =&gt; evt =&gt;
+                                {
+                                    if (evt is PipelineEvent.StepCompleted sc) _completed.Add(sc);
+                                    if (evt is PipelineEvent.StepFailed sf) _failed.Add(sf);
+                                };
+
+                                public void PrintSummary()
+                                {
+                                    Console.WriteLine(&quot;\n── Metrics ──────────────────────────────&quot;);
+                                    var byStep = _completed.GroupBy(c =&gt; c.StepName);
+                                    foreach (var group in byStep)
+                                    {
+                                        var avg = group.Average(c =&gt; c.Duration.TotalMilliseconds);
+                                        var max = group.Max(c =&gt; c.Duration.TotalMilliseconds);
+                                        Console.WriteLine($&quot;  {group.Key,-22} avg={avg:F1}ms  max={max:F1}ms  n={group.Count()}&quot;);
+                                    }
+                                    Console.WriteLine($&quot;  Errors: {_failed.Count}&quot;);
+                                }
+                            }
+                        }
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        using Microsoft.Extensions.DependencyInjection;
+                        using CsvBatchImporterDI;
+                        using CsvBatchImporterDI.Commands;
+                        using CsvBatchImporterDI.Events;
+                        using CsvBatchImporterDI.Models;
+
+                        // ═══════════════════════════════════════════════════
+                        //  1. KONTENER DI
+                        // ═══════════════════════════════════════════════════
+
+                        var services = CompositionRoot.CreateServices();
+                        var bus      = services.GetRequiredService&lt;PipelineEventBus&gt;();
+                        var options  = services.GetRequiredService&lt;PipelineOptions&gt;();
+                        var env      = services.GetRequiredService&lt;EnvironmentInfo&gt;();
+                        var metrics  = services.GetRequiredService&lt;EventSubscribers.MetricsCollector&gt;();
+
+                        // ═══════════════════════════════════════════════════
+                        //  2. SUBSKRYBENCI ZDARZEŃ
+                        // ═══════════════════════════════════════════════════
+
+                        bus.Subscribe(EventSubscribers.ConsoleLogger);
+                        bus.Subscribe(metrics.Handler);
+
+                        // ═══════════════════════════════════════════════════
+                        //  3. PIPELINE — tutaj widzisz cały przepływ
+                        // ═══════════════════════════════════════════════════
+                        //
+                        //  Trzy ścieżki wynikowe (jak w OneOf&lt;T, Failure, NoItems&gt;):
+                        //    ctx.ImportResult  → sukces
+                        //    ctx.Error         → błąd (zły format, nieznany schemat)
+                        //    ctx.NoItemsReason → puste (0 wierszy po filtrze, nie błąd)
+                        //
+                        //  OpenFile
+                        //    Then ParseCsv
+                        //    Then ValidateRows              ← może: NoItemsToProcess
+                        //    Then Deduplication             ← może: NoItemsToProcess
+                        //    ThenBranch &quot;SchemaRoute&quot;
+                        //       ├── When &quot;Orders&quot;   → CalcOrderTotals
+                        //       ├── When &quot;Sales&quot;    → CurrencyConvert
+                        //       ├── When &quot;Users&quot;    → ValidateEmail    ← może: NoItemsToProcess
+                        //       └── When &quot;Products&quot; → ValidateStock
+                        //    Then MapEntities
+                        //    ThenWaitForAll &quot;Enrichment&quot;
+                        //       ├── GeoLookup       (parallel)
+                        //       └── AuditStamp      (parallel)
+                        //    Then SaveBatch
+
+                        var flow = Flow.Start()
+
+                            // cross-cutting
+                            .Then&lt;StartTimingCommand&gt;()
+
+                            // wsp&#243;lne kroki wejściowe
+                            .Then&lt;OpenFileCSVCommand&gt;()                           // → ctx.FileContext
+                            .Then&lt;ParseCsvCommand&gt;()                           // → ctx.ParsedFile
+                            .Then&lt;ValidateRowsCommand&gt;()                       // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;DeduplicationCommand&gt;()                      // → ctx.ValidatedFile  | ctx.NoItemsReason
+
+                            // rozgałęzienie per schemat
+                            .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
+                                .When(&quot;Orders&quot;,   ctx =&gt; ctx.FileContext?.Schema == &quot;Orders&quot;,
+                                    then =&gt; then.Then&lt;CalcOrderTotalsCommand&gt;())
+                                .When(&quot;Sales&quot;,    ctx =&gt; ctx.FileContext?.Schema == &quot;Sales&quot;,
+                                    then =&gt; then.Then&lt;CurrencyConvertCommand&gt;())
+                                .When(&quot;Users&quot;,    ctx =&gt; ctx.FileContext?.Schema == &quot;Users&quot;,
+                                    then =&gt; then.Then&lt;ValidateEmailCommand&gt;())               // | ctx.NoItemsReason
+                                .When(&quot;Products&quot;, ctx =&gt; ctx.FileContext?.Schema == &quot;Products&quot;,
+                                    then =&gt; then.Then&lt;ValidateStockCommand&gt;()))
+
+                            // wsp&#243;lne kroki wyjściowe
+                            .Then&lt;MapEntitiesCommand&gt;()                        // → ctx.Entities
+
+                            // r&#243;wnoległe wzbogacenie
+                            .ThenWaitForAll&lt;GeoLookupCommand, AuditStampCommand&gt;(&quot;Enrichment&quot;)
+
+                            .Then&lt;SaveBatchCommand&gt;()                          // → ctx.ImportResult
+
+                            // BuildScoped — każde wywołanie = nowy scope DI
+                            .BuildScoped(services);
+
+                        // ═══════════════════════════════════════════════════
+                        //  4. DANE WEJŚCIOWE
+                        // ═══════════════════════════════════════════════════
+
+                        var baseDir  = AppContext.BaseDirectory;
+                        var dataDir  = Path.Combine(baseDir, &quot;SampleData&quot;);
+
+                        var filePaths = new[]
+                        {
+                            Path.Combine(dataDir, &quot;users.csv&quot;),                    // → sukces
+                            Path.Combine(dataDir, &quot;users_all_invalid.csv&quot;),        // → NoItemsToProcess (all rows fail validation)
+                            Path.Combine(dataDir, &quot;orders.csv&quot;),                   // → sukces
+                            Path.Combine(dataDir, &quot;sales.csv&quot;),                    // → sukces
+                            Path.Combine(dataDir, &quot;invoices_unknown_schema.csv&quot;),  // → Failure (unknown schema)
+                            Path.Combine(dataDir, &quot;missing_file.csv&quot;),             // → pominięty (pre-filter)
+                        };
+
+                        var existingPaths = filePaths.Where(File.Exists).ToArray();
+                        var missingPaths  = filePaths.Where(p =&gt; !File.Exists(p)).ToArray();
+
+                        // ═══════════════════════════════════════════════════
+                        //  5. URUCHOMIENIE
+                        // ═══════════════════════════════════════════════════
+
+                        Console.WriteLine(&quot;╔══════════════════════════════════════════════╗&quot;);
+                        Console.WriteLine(&quot;║    CSV Batch Importer  [Flow + Scoped DI]   ║&quot;);
+                        Console.WriteLine(&quot;╚══════════════════════════════════════════════╝&quot;);
+
+                        Console.Write($&quot;\nEnvironment: {env.Name}  |  BreakOnError: &quot;);
+                        if (options.BreakOnError)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine(&quot;true  ← debugger zatrzyma się na błędzie&quot;);
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine(&quot;false ← tryb produkcyjny&quot;);
+                        }
+                        Console.ResetColor();
+
+                        if (missingPaths.Length &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine(&quot;\nPominięte (nie znaleziono):&quot;);
+                            foreach (var m in missingPaths)
+                                Console.WriteLine($&quot;  ✗ {Path.GetFileName(m)}&quot;);
+                            Console.ResetColor();
+                        }
+
+                        Console.WriteLine($&quot;\nPipeline: {string.Join(&quot; → &quot;, flow.GetRegistered())}&quot;);
+                        Console.WriteLine($&quot;Batch: {existingPaths.Length} plik&#243;w\n&quot;);
+                        Console.WriteLine(&quot;─────────────────────────────────────────────&quot;);
+
+                        var batch = new BatchPipeline(flow, bus);
+                        var result = await batch.ProcessBatchAsync(existingPaths);
+
+                        // ═══════════════════════════════════════════════════
+                        //  6. RAPORT — trzy sekcje: sukces / puste / błędy
+                        // ═══════════════════════════════════════════════════
+
+                        Console.WriteLine(&quot;\n─────────────────────────────────────────────&quot;);
+                        Console.WriteLine(&quot;RAPORT BATCHA&quot;);
+                        Console.WriteLine(&quot;─────────────────────────────────────────────&quot;);
+
+                        if (!result.IsSuccess)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($&quot;Batch zakończony błędem: {result.Error}&quot;);
+                            Console.ResetColor();
+                            return;
+                        }
+
+                        var report = result.Value!;
+
+                        if (report.Succeeded &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine($&quot;\nZaimportowane ({report.Succeeded}):&quot;);
+                            Console.ResetColor();
+                            foreach (var imp in report.Imports)
+                            {
+                                var skip = imp.RowsSkipped &gt; 0 ? $&quot; ({imp.RowsSkipped} pominięto)&quot; : &quot;&quot;;
+                                Console.WriteLine($&quot;  + {Path.GetFileName(imp.FilePath)}: {imp.RowsSaved} wierszy{skip}&quot;);
+                            }
+                        }
+
+                        if (report.Skipped &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($&quot;\nPominięte — brak wierszy ({report.Skipped}):&quot;);
+                            Console.ResetColor();
+                            foreach (var sk in report.SkippedFiles)
+                                Console.WriteLine($&quot;  ○ {Path.GetFileName(sk.Path)}: {sk.Reason}&quot;);
+                        }
+
+                        var allErrors = report.Errors
+                            .Concat(missingPaths.Select(p =&gt; new FileError(p, &quot;File not found&quot;)))
+                            .ToList();
+
+                        if (allErrors.Count &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($&quot;\nBłędy ({allErrors.Count}):&quot;);
+                            Console.ResetColor();
+                            foreach (var err in allErrors)
+                                Console.WriteLine($&quot;  - {Path.GetFileName(err.Path)}: {err.Reason}&quot;);
+                        }
+
+                        var total = report.Total + missingPaths.Length;
+                        Console.WriteLine($&quot;\nŁącznie: {total}  |  OK: {report.Succeeded}  |  Puste: {report.Skipped}  |  Błędy: {allErrors.Count}&quot;);
+
+                        Console.ForegroundColor = allErrors.Count == 0 &amp;&amp; report.Skipped == 0 ? ConsoleColor.Green
+                            : report.Succeeded &gt; 0 ? ConsoleColor.Yellow : ConsoleColor.Red;
+                        Console.WriteLine(allErrors.Count == 0 &amp;&amp; report.Skipped == 0 ? &quot;Batch OK.&quot;
+                            : report.Succeeded &gt; 0 ? &quot;Częściowy sukces.&quot; : &quot;Batch failed.&quot;);
+                        Console.ResetColor();
+
+                        metrics.PrintSummary();
+
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                Potok jest uruchamiany z zakresem "scoped"
+        </span></span>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                To co pozwala na wymianę kolejności poleceń jest to
+        </span></span>
+    </section>
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        /// &lt;summary&gt;
+                        /// Mutowalny kontekst przepływu — każdy polecenie czyta/pisze swoje pola.
+                        /// Jeśli Error != null, kolejne polecenia powinny się pominąć.
+                        /// &lt;/summary&gt;
+                        public class PipelineContext
+                        {
+                            public required string FilePath { get; init; }
+
+                            // Wyniki poszczeg&#243;lnych krok&#243;w — nullable bo wypełniane stopniowo
+                            public FileContext? FileContext { get; set; }
+                            public ParsedFile? ParsedFile { get; set; }
+                            public ValidatedFile? ValidatedFile { get; set; }
+                            public List&lt;MappedEntity&gt;? Entities { get; set; }
+                            public ImportResult? ImportResult { get; set; }
+
+                            // Błąd — jeśli ustawiony, pipeline się zatrzymuje
+                            public string? Error { get; set; }
+                            public bool Failed =&gt; Error is not null;
+
+                            // Trzecia ścieżka — brak element&#243;w do przetworzenia (nie błąd!)
+                            public string? NoItemsReason { get; set; }
+                            public bool IsEmpty =&gt; NoItemsReason is not null;
+
+                            // Cokolwiek przerwało pipeline
+                            public bool Halted =&gt; Failed || IsEmpty;
+
+                            // Metadane do debugowania i raportowania
+                            public PipelineTrace Trace { get; } = new();
+
+                            // Dodatkowe dane z krok&#243;w schema-specific (np. OrdersTotal, CurrencyConverted)
+                            public Dictionary&lt;string, string&gt; Metadata { get; } = [];
+
+                            // Scoped DI provider — ustawiany przez ScopedFlow, dostępny dla sub-flow
+                            public IServiceProvider? ScopedServices { get; set; }
+                        }
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                Napisałem wiele wariancji tego kodu
+        </span></span>
+    </section>
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+               Z wbudowaną obsługą "statystk", "drukowaniem przepływu w konsoli", "tworzeniem pliku logu per nazwany pipeline z Serilog",
+            </p>
+            <p>
+               oraz z Cirut Breakerem który blokuje cały pipeline jeśli jest więcej błędów niż "N"
+            </p>
+        </div>
+    </section>
+        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                Oto przykład handlera z Kafka Flow
+        </span></span>
+    </section>
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        /// &lt;summary&gt;
+                        /// KafkaFlow middleware for batched inventory sync messages.
+                        /// Uses AddBatching + WithManualMessageCompletion.
+                        /// Commits the batch offset only on successful pipeline execution.
+                        /// Register as Transient.
+                        /// &lt;/summary&gt;
+                        public class InventorySyncBatchHandler : IMessageMiddleware
+                        {
+                            private readonly InventoryPipelineFactory              _factory;
+                            private readonly ILogger&lt;InventorySyncBatchHandler&gt;    _logger;
+                            private readonly PipelineLogsOptions _pipelineLogsOptions;
+
+                            public InventorySyncBatchHandler(InventoryPipelineFactory factory, ILogger&lt;InventorySyncBatchHandler&gt; logger, 
+                                PipelineLogsOptions pipelineLogsOptions)
+                            {
+                                _factory = factory;
+                                _logger = logger;
+                                _pipelineLogsOptions = pipelineLogsOptions;
+                            }
+
+                            public async Task Invoke(IMessageContext context, MiddlewareDelegate next)
+                            {
+                                var batch = context.GetMessagesBatch();
+                                _logger.LogInformation(&quot;Received inventory sync batch: {Count} messages&quot;, batch.Count);
+
+                                var syncMessages = new List&lt;KafkaInventorySyncMessage&gt;();
+
+                                foreach (var msg in batch)
+                                {
+                                    if (msg.Message.Value is KafkaInventorySyncMessage syncMsg)
+                                    {
+                                        syncMessages.Add(syncMsg);
+                                    }
+                                    else
+                                    {
+                                        _logger.LogWarning(&quot;Unexpected message type in inventory batch: {Type}&quot;,
+                                            msg.Message.Value?.GetType().Name ?? &quot;null&quot;);
+                                    }
+                                }
+
+                                if (!syncMessages.Any())
+                                {
+                                    _logger.LogWarning(&quot;No valid inventory sync messages in batch — skipping&quot;);
+                                    return;
+                                }
+
+                                var pipelineContext = BuildContext(syncMessages);
+                                var name = _pipelineLogsOptions.Pipelines[nameof(InventorySyncBatchHandler)];
+                                var result          = await _factory.Create(name).ExecuteAsync(pipelineContext);
+
+                                if (result.IsSuccess)
+                                {
+                                    batch.Commit();
+                                    _logger.LogInformation(
+                                        &quot;Inventory batch SUCCESS | BatchId: {Id} | Persisted: {P}/{T} | Warehouses: {W} | Duration: {D}ms&quot;,
+                                        pipelineContext.BatchId,
+                                        pipelineContext.PersistedItems.Count,
+                                        pipelineContext.Items.Count,
+                                        pipelineContext.ByWarehouse.Count,
+                                        result.ExecutionStats?.TotalDuration.TotalMilliseconds ?? 0);
+                                }
+                                else if (result.WasTerminatedEarly)
+                                {
+                                    _logger.LogWarning(&quot;Inventory batch terminated early: {Reason}. Batch NOT committed.&quot;,
+                                        result.TerminationReason);
+                                }
+                                else
+                                {
+                                    _logger.LogError(
+                                        &quot;Inventory batch FAILED: {Error}. Batch NOT committed — {Count} messages will be re-delivered.&quot;,
+                                        result.ErrorMessage, batch.Count);
+                                }
+                            }
+
+                            private static InventorySyncContext BuildContext(List&lt;KafkaInventorySyncMessage&gt; messages)
+                            {
+                                var context = new InventorySyncContext
+                                {
+                                    ProcessingStartedAt = DateTime.UtcNow,
+                                    BatchSize           = messages.Count
+                                };
+
+                                foreach (var msg in messages)
+                                {
+                                    context.Items.Add(new ProcessableInventoryItem { Original = msg });
+                                }
+
+                                return context;
+                            }
+                        }
+
+
+                        /// &lt;summary&gt;
+                        /// Builds inventory sync pipelines on demand.
+                        /// Register as Transient.
+                        /// &lt;/summary&gt;
+                        public class InventoryPipelineFactory
+                        {
+                            private readonly GlobalStatisticsTracker _stats;
+                            private readonly IServiceProvider _serviceProvider;
+                            private readonly ILogger&lt;InventoryPipelineFactory&gt; _logger;
+
+                            public InventoryPipelineFactory(
+                                GlobalStatisticsTracker stats,
+                                IServiceProvider serviceProvider,
+                                ILogger&lt;InventoryPipelineFactory&gt; logger)
+                            {
+                                _stats = stats;
+                                _serviceProvider = serviceProvider;
+                                _logger = logger;
+                            }
+
+                            /// &lt;summary&gt;
+                            /// Creates a fully built inventory sync pipeline with the given name.
+                            /// Each call returns a distinct pipeline instance — use once per handler.
+                            /// &lt;/summary&gt;
+                            public CommandPipeline&lt;InventorySyncContext&gt; Create(string pipelineName)
+                            {
+                                var pipeline = new CommandPipeline&lt;InventorySyncContext&gt;(
+                                    _stats, _serviceProvider, pipelineName);
+
+                                pipeline.AddEventHandler(new KafkaPipelineEventHandler());
+
+                                new CommandChainBuilder&lt;InventorySyncContext&gt;(pipeline)
+                                    .Then&lt;ValidateInventoryCommand&gt;()
+                                    .Then&lt;AggregateInventoryCommand&gt;()
+                                    .Then&lt;PersistInventoryCommand&gt;()
+                                    .Build();
+
+                                _logger.LogInformation(
+                                    &quot;[{Pipeline}] Inventory pipeline built: Validate → Aggregate → Persist&quot;,
+                                    pipelineName);
+
+                                return pipeline;
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+                <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        using KafkaFlow;
+                        using KafkaFlow.Serializer;
+                        using KafkaPipeline.ConsumerDI;
+                        using KafkaPipeline.ConsumerDI.Pipeline;
+                        using KafkaPipeline.ConsumerDI.Pipeline.Handlers;
+                        using KafkaPipeline.Shared;
+                        using Microsoft.Extensions.Configuration;
+                        using Microsoft.Extensions.DependencyInjection;
+                        using Microsoft.Extensions.Hosting;
+                        using Serilog;
+                        using Serilog.Events;
+
+                        namespace KafkaPipeline.ConsumerDI;
+
+                        public class Program
+                        {
+                            private const string InventoryConsumerName = &quot;inventory-consumer&quot;;
+
+                            public static async Task Main(string[] args)
+                            {
+                                var configuration = new ConfigurationBuilder()
+                                    .SetBasePath(Directory.GetCurrentDirectory())
+                                    .AddJsonFile(&quot;appsettings.json&quot;, optional: false)
+                                    .AddEnvironmentVariables()
+                                    .Build();
+
+                                var pipelineLogs = configuration
+                                    .GetSection(PipelineLogsOptions.Section)
+                                    .Get&lt;PipelineLogsOptions&gt;() ?? new PipelineLogsOptions();
+
+                                Log.Logger = BuildLogger(pipelineLogs);
+
+                                try
+                                {
+                                    Log.Information(&quot;╔════════════════════════════════════════════════════════════════╗&quot;);
+                                    Log.Information(&quot;║   Kafka Pipeline Consumer — DI Edition                        ║&quot;);
+                                    Log.Information(&quot;║   All commands resolved from IServiceScope per execution      ║&quot;);
+                                    Log.Information(&quot;║   Broker: localhost:19092                                     ║&quot;);
+                                    Log.Information(&quot;║   Topics:                                                     ║&quot;);
+                                    Log.Information(&quot;║     • {Topic,-46}║&quot;, KafkaTopics.OrdersInbound   + &quot; (linear pipeline)&quot;);
+                                    Log.Information(&quot;║     • {Topic,-46}║&quot;, KafkaTopics.PaymentsInbound + &quot; (branching pipeline)&quot;);
+                                    Log.Information(&quot;║     • {Topic,-46}║&quot;, KafkaTopics.InventorySync   + &quot; (batch pipeline)&quot;);
+                                    Log.Information(&quot;╚════════════════════════════════════════════════════════════════╝&quot;);
+
+                                    var host =  Host
+                                        .CreateDefaultBuilder(args)
+                                        .UseSerilog()
+                                        .ConfigureServices((context, services) =&gt;
+                                        {
+                                            services.Configure&lt;PipelineLogsOptions&gt;(
+                                                context.Configuration.GetSection(PipelineLogsOptions.Section));
+
+                                            // Register all pipeline services, commands, repositories, handlers, factories
+                                            services.AddSingleton&lt;PipelineLogsOptions&gt;(pipelineLogs);
+                                            services.AddKafkaPipelineServices();
+
+                                            services.AddKafkaFlowHostedService(kafka =&gt; kafka
+                                                .UseMicrosoftLog()
+                                                .AddCluster(cluster =&gt; cluster
+                                                    .WithBrokers(new[] { &quot;localhost:19092&quot; })
+                                                    .CreateTopicIfNotExists(KafkaTopics.InventorySync, numberOfPartitions: 3, replicationFactor: 1)
+                                                    // ── Consumer : Inventory Sync (batch pipeline) ───────────────────────
+                                                    .AddConsumer(consumer =&gt; consumer
+                                                        .Topic(KafkaTopics.InventorySync)
+                                                        .WithGroupId(KafkaConsumerGroups.InventorySyncGroup)
+                                                        .WithName(InventoryConsumerName)
+                                                        .WithBufferSize(200)
+                                                        .WithWorkersCount(1)
+                                                        .WithAutoOffsetReset(AutoOffsetReset.Earliest)
+                                                        .WithManualMessageCompletion()
+                                                        .AddMiddlewares(middlewares =&gt; middlewares
+                                                            .AddDeserializer&lt;JsonCoreDeserializer&gt;()
+                                                            .AddBatching(50, TimeSpan.FromSeconds(5))
+                                                            .Add&lt;InventorySyncBatchHandler&gt;()
+                                                        )
+                                                    )
+                                                )
+                                            );
+                                        })
+                                        .Build();
+
+                                    try
+                                    {
+                                        var inventoryFactory = host.Services.GetRequiredService&lt;InventoryPipelineFactory&gt;();
+                                        Log.Information(&quot;All pipeline factories built successfully&quot;);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Log.Fatal(ex, &quot;Failed to build pipeline factories&quot;);
+                                        return;
+                                    }
+
+
+                                    await host.RunAsync();
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    Log.Fatal(ex, &quot;Consumer terminated unexpectedly&quot;);
+                                }
+                                finally
+                                {
+                                    Log.Information(&quot;Consumer shutting down...&quot;);
+                                    await Log.CloseAndFlushAsync();
+                                }
+                            }
+
+                            private static ILogger BuildLogger(PipelineLogsOptions options)
+                            {
+                                var config = new LoggerConfiguration()
+                                    .MinimumLevel.Debug()
+                                    .MinimumLevel.Override(&quot;Microsoft&quot;, LogEventLevel.Warning)
+                                    .MinimumLevel.Override(&quot;KafkaFlow&quot;,  LogEventLevel.Warning)
+                                    .Enrich.FromLogContext()
+                                    .WriteTo.Console(
+                                        outputTemplate: &quot;[{Timestamp:HH:mm:ss.fff} {Level:u3}] {Message:lj}{NewLine}{Exception}&quot;)
+                                    .WriteTo.File(
+                                        path: Path.Combine(options.Directory, &quot;log.txt&quot;),
+                                        rollingInterval: RollingInterval.Hour,
+                                        outputTemplate: &quot;{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] [{CommandPipelineName}] [{ExecutionId}] {Message:lj}{NewLine}{Exception}&quot;);
+
+                                // Per-pipeline sub-loggers — filter by CommandPipelineName enriched via LogContext
+                                foreach (var pipelineName in options.Pipelines.Values.Distinct())
+                                {
+                                    var name    = pipelineName; // local copy for lambda closure
+                                    var logPath = Path.Combine(options.Directory, name, &quot;log.txt&quot;);
+
+                                    config = config.WriteTo.Logger(lc =&gt; lc
+                                        .Filter.ByIncludingOnly(evt =&gt;
+                                            evt.Properties.TryGetValue(&quot;CommandPipelineName&quot;, out var value)
+                                            &amp;&amp; value.ToString().Trim(&#39;&quot;&#39;) == name)
+                                        .WriteTo.File(
+                                            path: logPath,
+                                            rollingInterval: RollingInterval.Hour,
+                                            outputTemplate: &quot;{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] [{ExecutionId}] {Message:lj}{NewLine}{Exception}&quot;));
+                                }
+
+                                return config.CreateLogger();
+                            }
+                        }
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+                    <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public class InventorySyncContext
+                        {
+                            public string   BatchId             { get; set; } = Guid.NewGuid().ToString(&quot;N&quot;)[..8];
+                            public DateTime ProcessingStartedAt { get; set; } = DateTime.UtcNow;
+                            public int      BatchSize           { get; set; }
+
+                            public List&lt;ProcessableInventoryItem&gt;                          Items          { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;                          ValidatedItems { get; set; } = new();
+                            public Dictionary&lt;string, List&lt;ProcessableInventoryItem&gt;&gt;      ByWarehouse    { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;                          PersistedItems { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;                          FailedItems    { get; set; } = new();
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Lepiej mieć jedną kolekcję która będzie się zmieniać przez potok
+        </span></span>
+    </section>
+                        <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public class InventorySyncContext
+                        {
+                            public string   BatchId             { get; set; } = Guid.NewGuid().ToString(&quot;N&quot;)[..8];
+                            public DateTime ProcessingStartedAt { get; set; } = DateTime.UtcNow;
+                            public int      BatchSize           { get; set; }
+
+                            public List&lt;ProcessableInventoryItem&gt;                          Items          { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;                          FailedItems    { get; set; } = new();
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Już ktoś przygotował rozwiązanie "funkcyjne" w C#
+        </span></span>
+    </section>
+    <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/Youtube-01.png" alt="screenshot" />
+        </figure>
+    </section>
+            <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/Youtube-02.png" alt="screenshot" />
+        </figure>
+    </section>
+            <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/Youtube-03.png" alt="screenshot" />
+        </figure>
+    </section>
+    <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/Youtube-04.png" alt="screenshot" />
+        </figure>
+    </section>
+          <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Union type</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        OneOf&lt;User, Error&gt;
+                        OneOf&lt;User, NotFound, ValidationError&gt;
+                        OneOf&lt;Success, Failure&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Czy to jest ta słyna "monada"?
+        </span></span>
+    </section>
+            <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Na pewno jest to najlepszy sposób na symulowanie Union types w C#
+        </span></span>
+    </section>
+   <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>OneOf Triple</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        /// &lt;summary&gt;
+                        /// Extension methods dla OneOf&amp;lt;TSuccess, TFailure, TEmpty&amp;gt; — trzy ścieżki:
+                        ///   T0 = sukces → kontynuuj łańcuch
+                        ///   T1 = failure → przerwij (błąd)
+                        ///   T2 = empty  → przerwij (brak element&#243;w, nie błąd)
+                        ///
+                        /// Wzorowane na OneOf.Chaining, rozszerzone o trzeci wariant.
+                        /// &lt;/summary&gt;
+                        public static class OneOfTripleExtensions
+                        {
+                            /// &lt;summary&gt;
+                            /// Then — wykonaj następny krok jeśli sukces, inaczej propaguj failure/empty.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
+                                this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
+                                Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+                                return result.Match&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;(
+                                    success =&gt; nextJob(success).Result,
+                                    failure =&gt; failure,
+                                    empty   =&gt; empty);
+                            }
+
+                            /// &lt;summary&gt;
+                            /// Then (async-safe) — wersja poprawnie awaitująca.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; ThenAsync&lt;TSuccess, TFailure, TEmpty&gt;(
+                                this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
+                                Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                if (result.IsT1) return result.AsT1; // failure
+                                if (result.IsT2) return result.AsT2; // empty
+
+                                return await nextJob(result.AsT0);
+                            }
+
+                            /// &lt;summary&gt;
+                            /// IfThen — wykonaj krok TYLKO gdy predykat == true i jest sukces.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; IfThen&lt;TSuccess, TFailure, TEmpty&gt;(
+                                this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
+                                Func&lt;TSuccess, bool&gt; condition,
+                                Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                if (result.IsT1) return result.AsT1;
+                                if (result.IsT2) return result.AsT2;
+
+                                var success = result.AsT0;
+                                if (!condition(success)) return success;
+
+                                return await nextJob(success);
+                            }
+
+                            /// &lt;summary&gt;
+                            /// Sync Then — dla krok&#243;w synchronicznych.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
+                                this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
+                                Func&lt;TSuccess, OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                if (result.IsT1) return result.AsT1;
+                                if (result.IsT2) return result.AsT2;
+
+                                return nextJob(result.AsT0);
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+   <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>OneOf Triple</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        public static class CompositionRoot
+                        {
+                            public static IServiceProvider CreateServices()
+                            {
+                                var services = new ServiceCollection();
+
+                                // Kroki pipeline&#39;u — każdy jako serwis DI
+                                services.AddScoped&lt;FileSteps&gt;();
+                                services.AddScoped&lt;ValidationSteps&gt;();
+                                services.AddScoped&lt;MappingSteps&gt;();
+                                services.AddScoped&lt;PersistenceSteps&gt;();
+
+                                // Schema-specific
+                                services.AddScoped&lt;OrderSteps&gt;();
+                                services.AddScoped&lt;SalesSteps&gt;();
+                                services.AddScoped&lt;UserSteps&gt;();
+                                services.AddScoped&lt;ProductSteps&gt;();
+
+                                // Enrichment
+                                services.AddScoped&lt;EnrichmentSteps&gt;();
+
+                                return services.BuildServiceProvider();
+                            }
+                        }
+
                     </code>
                 </pre>
             </div>
         </div>
     </section>
 
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 15 — Comparison: OLD vs NEW side by side                ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal raised">
-        <h2 style="border-color: var(--tag-teal);">Stare vs Nowe klasy CSS</h2>
-        <ol class="nonumbers">
-            <li><span class="hl-red">STARE:</span> creamGrey kkk → <span class="hl-green">NOWE:</span> theme-dark tag-teal</li>
-            <li class="next"><span class="hl-red">STARE:</span> creamPPPGragient → <span class="hl-green">NOWE:</span> theme-gradient-purple</li>
-            <li class="next"><span class="hl-red">STARE:</span> conicG2 → <span class="hl-green">NOWE:</span> theme-conic-cool</li>
-            <li class="next"><span class="hl-red">STARE:</span> SlidePointImage → <span class="hl-green">NOWE:</span> split-image</li>
-            <li class="next"><span class="hl-red">STARE:</span> grid-container → <span class="hl-green">NOWE:</span> layout-code</li>
-        </ol>
-    </section>
+        <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>OneOf Triple</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        using Microsoft.Extensions.DependencyInjection;
+                        using CsvImporter;
+                        using CsvImporter.Models;
+                        using CsvImporter.Steps;
 
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 16 — Summary / Architecture                             ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
-    <section class="slide theme-dark tag-teal fullscreen">
+                        // ═══════════════════════════════════════════════════
+                        //  1. SETUP
+                        // ═══════════════════════════════════════════════════
+
+                        var services = CompositionRoot.CreateServices();
+
+                        var dataDir = Path.Combine(AppContext.BaseDirectory, &quot;SampleData&quot;);
+                        var filePaths = new[]
+                        {
+                            Path.Combine(dataDir, &quot;users.csv&quot;),
+                            Path.Combine(dataDir, &quot;users_all_invalid.csv&quot;),      // ← NoItemsToProcess: all rows fail validation
+                            Path.Combine(dataDir, &quot;orders.csv&quot;),
+                            Path.Combine(dataDir, &quot;sales.csv&quot;),
+                            Path.Combine(dataDir, &quot;invoices_unknown_schema.csv&quot;), // ← Failure: unknown schema
+                            Path.Combine(dataDir, &quot;missing_file.csv&quot;),            // ← skipped: file not found
+                        };
+
+                        var existingPaths = filePaths.Where(File.Exists).ToArray();
+                        var missingPaths  = filePaths.Where(p =&gt; !File.Exists(p)).ToArray();
+
+                        Console.WriteLine(&quot;╔══════════════════════════════════════════════╗&quot;);
+                        Console.WriteLine(&quot;║   CSV Batch Importer  [OneOf.Chaining]      ║&quot;);
+                        Console.WriteLine(&quot;╚══════════════════════════════════════════════╝&quot;);
+
+                        if (missingPaths.Length &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine(&quot;\nPominięte (nie znaleziono):&quot;);
+                            foreach (var m in missingPaths)
+                                Console.WriteLine($&quot;  ✗ {Path.GetFileName(m)}&quot;);
+                            Console.ResetColor();
+                        }
+
+                        Console.WriteLine($&quot;\nBatch: {existingPaths.Length} plik&#243;w\n&quot;);
+                        Console.WriteLine(&quot;─────────────────────────────────────────────&quot;);
+
+                        var imports  = new List&lt;ImportResult&gt;();
+                        var errors   = new List&lt;FileError&gt;();
+                        var skipped  = new List&lt;(string Path, string Reason)&gt;();
+
+                        foreach (var path in existingPaths)
+                        {
+                            Console.WriteLine($&quot;\n  Plik: {Path.GetFileName(path)}&quot;);
+
+                            await using var scope = services.CreateAsyncScope();
+                            var sp = scope.ServiceProvider;
+
+                            var file       = sp.GetRequiredService&lt;FileSteps&gt;();
+                            var validation = sp.GetRequiredService&lt;ValidationSteps&gt;();
+                            var mapping    = sp.GetRequiredService&lt;MappingSteps&gt;();
+                            var persistence= sp.GetRequiredService&lt;PersistenceSteps&gt;();
+                            var orders     = sp.GetRequiredService&lt;OrderSteps&gt;();
+                            var sales      = sp.GetRequiredService&lt;SalesSteps&gt;();
+                            var users      = sp.GetRequiredService&lt;UserSteps&gt;();
+                            var products   = sp.GetRequiredService&lt;ProductSteps&gt;();
+                            var enrichment = sp.GetRequiredService&lt;EnrichmentSteps&gt;();
+
+                            // ── Cały przepływ ─────────────────────────────
+                            var result = await ImportContext.Create(path)
+
+                                // wsp&#243;lne kroki wejściowe
+                                .ThenAsync(file.OpenFile)
+                                .ThenAsync(file.ParseCsv)
+                                .ThenAsync(validation.ValidateRows)              // → może: NoItemsToProcess
+                                .ThenAsync(validation.Deduplicate)                // → może: NoItemsToProcess
+
+                                // rozgałęzienie per schemat
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Orders&quot;,   orders.CalcTotals)
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Sales&quot;,    sales.ConvertCurrency)
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Users&quot;,    users.ValidateEmails)    // → może: NoItemsToProcess
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Products&quot;, products.ValidateStock)
+
+                                // wsp&#243;lne kroki wyjściowe
+                                .ThenAsync(mapping.MapEntities)
+                                .ThenAsync(enrichment.GeoLookup)
+                                .ThenAsync(enrichment.AuditStamp)
+                                .ThenAsync(persistence.SaveBatch);
+
+                            // ── Obsługa trzech ścieżek ────────────────────
+                            result.Switch(
+                                ctx =&gt;
+                                {
+                                    // Sukces
+                                    foreach (var t in ctx.Trace)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.Write($&quot;    ✓ {t.Step,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {t.Duration.TotalMilliseconds,6:F1}ms  {t.Detail}&quot;);
+                                    }
+                                    imports.Add(ctx.Result!);
+                                },
+                                failure =&gt;
+                                {
+                                    // Błąd = łańcuch przerwany
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine($&quot;    ✗ {failure}&quot;);
+                                    Console.ResetColor();
+                                    errors.Add(new FileError(path, failure.Reason));
+                                },
+                                noItems =&gt;
+                                {
+                                    // ○ Puste — plik poprawny, ale 0 wierszy po filtrze
+                                    // Wypisz trace z krok&#243;w kt&#243;re się wykonały PRZED przerwaniem
+                                    foreach (var t in noItems.Context.Trace)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                                        Console.Write($&quot;    ✓ {t.Step,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {t.Duration.TotalMilliseconds,6:F1}ms  {t.Detail}&quot;);
+                                    }
+                                    Console.ForegroundColor = ConsoleColor.Yellow;
+                                    Console.WriteLine($&quot;    ○ {noItems}&quot;);
+                                    Console.ResetColor();
+                                    skipped.Add((path, noItems.Reason));
+                                });
+                        }
+
+                        // ═══════════════════════════════════════════════════
+                        //  3. RAPORT
+                        // ═══════════════════════════════════════════════════
+
+                        var allErrors = errors
+                            .Concat(missingPaths.Select(p =&gt; new FileError(p, &quot;File not found&quot;)))
+                            .ToList();
+
+                        Console.WriteLine(&quot;\n─────────────────────────────────────────────&quot;);
+                        Console.WriteLine(&quot;RAPORT BATCHA&quot;);
+                        Console.WriteLine(&quot;─────────────────────────────────────────────&quot;);
+
+                        if (imports.Count &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine($&quot;\nZaimportowane ({imports.Count}):&quot;);
+                            Console.ResetColor();
+                            foreach (var imp in imports)
+                            {
+                                var skip = imp.RowsSkipped &gt; 0 ? $&quot; ({imp.RowsSkipped} pominięto)&quot; : &quot;&quot;;
+                                Console.WriteLine($&quot;  + {Path.GetFileName(imp.FilePath)}: {imp.RowsSaved} wierszy{skip}&quot;);
+                            }
+                        }
+
+                        if (skipped.Count &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($&quot;\nPominięte — brak wierszy ({skipped.Count}):&quot;);
+                            Console.ResetColor();
+                            foreach (var (p, reason) in skipped)
+                                Console.WriteLine($&quot;  ○ {Path.GetFileName(p)}: {reason}&quot;);
+                        }
+
+                        if (allErrors.Count &gt; 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($&quot;\nBłędy ({allErrors.Count}):&quot;);
+                            Console.ResetColor();
+                            foreach (var err in allErrors)
+                                Console.WriteLine($&quot;  - {Path.GetFileName(err.Path)}: {err.Reason}&quot;);
+                        }
+
+                        var total = existingPaths.Length + missingPaths.Length;
+                        Console.WriteLine($&quot;\nŁącznie: {total}  |  OK: {imports.Count}  |  Puste: {skipped.Count}  |  Błędy: {allErrors.Count}&quot;);
+
+                        Console.ForegroundColor = allErrors.Count == 0 &amp;&amp; skipped.Count == 0 ? ConsoleColor.Green
+                            : imports.Count &gt; 0 ? ConsoleColor.Yellow : ConsoleColor.Red;
+                        Console.WriteLine(allErrors.Count == 0 &amp;&amp; skipped.Count == 0 ? &quot;Batch OK.&quot;
+                            : imports.Count &gt; 0 ? &quot;Częściowy sukces.&quot; : &quot;Batch failed.&quot;);
+                        Console.ResetColor();
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slide theme-dark tag-darkblue fullscreen">
         <div class="layout-splitpoint">
             <div class="split-image">
-                <img title="icon" src="pictures/iconsFr/d3.png" />
+                <img title="icon" src="pictures/icons/11.png" />
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
-                    <li class="bold">Architektura CSS</li>
+                    <li class="bold2">Podobne rozwiązania tych problemów widziałem już</li>
                     <ol class="nonumbers">
-                        <li class="next">_tokens.css → jeden plik z kolorami</li>
-                        <li class="next">_slide-themes.css → theme-* + tag-*</li>
-                        <li class="next">_slide-layouts.css → layout-*</li>
-                        <li class="next">_components.css → hl-*, tc-*, badges</li>
+                        <li class="next">W Microsoft Agent Framework 1.0 : który służy do tworzenia przepływu działań agentów i deterministycznego kodu</li>
+                        <li class="next">MAF ma dwa rodzaje klocków : Executory</li>
                     </ol>
                 </ol>
             </div>
         </div>
     </section>
+        <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/12.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">MAF ma dwa rodzaje klocków : </li>
+                    <ol class="nonumbers">
+                        <li class="next">Executory czyli coś jak "Command" w tej prezentacji który uruchamia kod deterministyczny lub Agentowy LLM</li>
+                        <li class="next">MAF na 3 poziomach daje możliwość wstrzykiwania middleware aby badać wyniki Agentów albo strzałów do MCP</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+           <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/13.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">MAF a kolejność executorów w workflow</li>
+                    <ol class="nonumbers">
+                        <li class="next">Executory definuje co przychodzi o co wychodzia</li>
+                        <li class="next">A spójność przepływu z definiowanym "workflow" pilnuje wygenerowany kod przez source generators, więc przy kompilacji wiesz co nie działa</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Microsoft Agent Framework 1.0</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 29px; overflow: hidden;">
+                    <code style="line-height: 29px !important;" class="language-cs">
+                        using AiContentTeam;
+                        using AiContentTeam.Guardrails;
+                        using AiContentTeam.Middleware;
+                        using Microsoft.Agents.AI;
+                        using Microsoft.Agents.AI.DevUI;
+                        using Microsoft.Agents.AI.Hosting;
+                        using Microsoft.Agents.AI.Workflows;
+                        using Microsoft.Extensions.AI;
+                        using ModelContextProtocol.Client;
 
-    <!-- ╔══════════════════════════════════════════════════════════════════╗
-         ║  SLIDE 17 — Hero layout (centered text with bars)              ║
-         ║  NEW:   layout-hero > hero-top + hero-center + hero-bottom     ║
-         ║  OLD:   Main-grid-container > Main-Text + Background1/2        ║
-         ╚══════════════════════════════════════════════════════════════════╝ -->
+                        var builder = WebApplication.CreateBuilder(args);
+
+                        // ── IChatClient ───────────────────────────────────────────────────────────────
+
+                        IChatClient chatClient = new Anthropic.AnthropicClient()
+                            .AsIChatClient(&quot;claude-haiku-4-5&quot;);
+
+                        builder.Services.AddChatClient(chatClient);
+
+                        // ── MCP tools ────────────────────────────────────────────────────────────────
+
+                        builder.Services.AddSingleton&lt;IList&lt;McpClientTool&gt;&gt;(sp =&gt;
+                        {
+                            return Task.Run(async () =&gt;
+                            {
+                                var mcpClient = await McpClient.CreateAsync(
+                                    new HttpClientTransport(new HttpClientTransportOptions
+                                    {
+                                        Endpoint = new Uri(&quot;http://localhost:2001/mcp&quot;)
+                                    }));
+                                return await mcpClient.ListToolsAsync();
+                            }).GetAwaiter().GetResult();
+                        });
+
+                        // ── Skills provider ───────────────────────────────────────────────────────────
+
+                        #pragma warning disable MAAI001
+                        builder.Services.AddSingleton(
+                            new AgentSkillsProvider(Path.Combine(AppContext.BaseDirectory, &quot;skills&quot;)));
+                        #pragma warning restore MAAI001
+
+                        // ── Guardrails ────────────────────────────────────────────────────────────────
+
+                        var contentPolicy = new ContentPolicyGuardrail();
+                        var brandSafety = new BrandSafetyGuardrail(
+                            competitors: [&quot;CompetitorA&quot;, &quot;CompetitorB&quot;],
+                            requireCTA: true);
+                        var outputLength = new OutputLengthGuardrail(maxChars: 3000);
+
+                        // ── Agenty w DI ───────────────────────────────────────────────────────────────
+
+                        builder.Services.AddKeyedSingleton&lt;AIAgent&gt;(&quot;Researcher&quot;, (sp, _) =&gt;
+                        {
+                            var chat = sp.GetRequiredService&lt;IChatClient&gt;();
+                            var mcpTools = sp.GetRequiredService&lt;IList&lt;McpClientTool&gt;&gt;();
+
+                            return GuardrailFactory.WrapWithFullPipeline(
+                                new ChatClientAgent(chat, new ChatClientAgentOptions
+                                {
+                                    Name = &quot;Researcher&quot;,
+                                    ChatOptions = new()
+                                    {
+                                        Instructions = &quot;&quot;&quot;
+                                            Jesteś research agentem. Twoim JEDYNYM zadaniem jest:
+                                            1. UŻYJ NARZĘDZIA GetYouTubeTranscript aby pobrać transkrypcję z podanego URL
+                                            2. Na podstawie wyniku wyodrębnij dokładnie 5 kluczowych tez jako bullet pointy
+
+                                            ZASADY:
+                                            - ZAWSZE wywołuj narzędzie GetYouTubeTranscript
+                                            - Odpowiadaj po polsku
+                                            - Każdą tezę pisz w osobnej linii zaczynającej się od &quot;• &quot;
+                                            &quot;&quot;&quot;,
+                                        Tools = [.. mcpTools]
+                                    }
+                                }),
+                                enableLogging: true,
+                                enableRetry: true);
+                        });
+
+                        builder.Services.AddKeyedSingleton&lt;AIAgent&gt;(&quot;Copywriter&quot;, (sp, _) =&gt;
+                        {
+                            var chat = sp.GetRequiredService&lt;IChatClient&gt;();
+                            var skills = sp.GetRequiredService&lt;AgentSkillsProvider&gt;();
+
+                            return GuardrailFactory.WrapWithFullPipeline(
+                                new ChatClientAgent(chat, new ChatClientAgentOptions
+                                {
+                                    Name = &quot;Copywriter&quot;,
+                                    AIContextProviders = [skills],
+                                    ChatOptions = new()
+                                    {
+                                        Instructions = &quot;&quot;&quot;
+                                            Jesteś copywriterem specjalizującym się w treściach dla .NET developer&#243;w.
+                                            Na podstawie tez od Researchera napisz post na LinkedIn.
+
+                                            ZASADY:
+                                            - 150-250 sł&#243;w, max 3 emoji
+                                            - Mocny hook w 1. zdaniu
+                                            - Zakończ pytaniem do społeczności
+                                            - Napisz TYLKO treść posta, bez meta-komentarza
+                                            - Odpowiadaj po polsku
+                                            &quot;&quot;&quot;
+                                    }
+                                }),
+                                enableLogging: true,
+                                enableRetry: true,
+                                contentPolicy, brandSafety, outputLength);
+                        });
+
+                        builder.Services.AddKeyedSingleton&lt;AIAgent&gt;(&quot;Strateg&quot;, (sp, _) =&gt;
+                        {
+                            var chat = sp.GetRequiredService&lt;IChatClient&gt;();
+                            var skills = sp.GetRequiredService&lt;AgentSkillsProvider&gt;();
+
+                            return GuardrailFactory.WrapWithFullPipeline(
+                                new ChatClientAgent(chat, new ChatClientAgentOptions
+                                {
+                                    Name = &quot;Strateg&quot;,
+                                    AIContextProviders = [skills],
+                                    ChatOptions = new()
+                                    {
+                                        Instructions = &quot;&quot;&quot;
+                                            Jesteś strategiem social media dla społeczności .NET developer&#243;w.
+                                            Przeanalizuj temat i odpowiedz STRUKTURALNIE:
+
+                                            ANALIZA TREND&#211;W: [2-3 zdania]
+                                            REKOMENDOWANY HOOK: [jedno zdanie]
+                                            SUGEROWANE HASHTAGI: [max 5, format #tag]
+                                            UWAGI O ZAANGAŻOWANIU: [1-2 zdania]
+
+                                            Odpowiadaj po polsku.
+                                            &quot;&quot;&quot;,
+                                        Tools = [AIFunctionFactory.Create(GetLinkedInTrends)]
+                                    }
+                                }),
+                                enableLogging: true,
+                                enableRetry: true,
+                                outputLength);
+                        });
+
+                        builder.Services.AddKeyedSingleton&lt;AIAgent&gt;(&quot;Redaktor&quot;, (sp, _) =&gt;
+                        {
+                            var chat = sp.GetRequiredService&lt;IChatClient&gt;();
+
+                            return GuardrailFactory.WrapWithFullPipeline(
+                                new ChatClientAgent(chat, new ChatClientAgentOptions
+                                {
+                                    Name = &quot;Redaktor&quot;,
+                                    ChatOptions = new()
+                                    {
+                                        Instructions = &quot;&quot;&quot;
+                                            Jesteś redaktorem naczelnym. Dostałeś draft i analizę strategiczną.
+                                            Zastosuj rekomendacje, popraw błędy językowe.
+                                            Napisz TYLKO finalną treść posta po polsku.
+                                            &quot;&quot;&quot;
+                                    }
+                                }),
+                                enableLogging: true,
+                                enableRetry: true,
+                                contentPolicy, brandSafety, outputLength);
+                        });
+
+                        // ══════════════════════════════════════════════════════════════════════════════
+                        //  content-pipeline-dev — BEZ HITL, do DevUI
+                        // ══════════════════════════════════════════════════════════════════════════════
+
+                        builder.AddWorkflow(&quot;content-pipeline-dev&quot;, (sp, key) =&gt;
+                        {
+                            var chat = sp.GetRequiredService&lt;IChatClient&gt;();
+                            var researcherAgent = sp.GetRequiredKeyedService&lt;AIAgent&gt;(&quot;Researcher&quot;);
+                            var copywriterAgent = sp.GetRequiredKeyedService&lt;AIAgent&gt;(&quot;Copywriter&quot;);
+                            var strategAgent = sp.GetRequiredKeyedService&lt;AIAgent&gt;(&quot;Strateg&quot;);
+                            var redaktorAgent = sp.GetRequiredKeyedService&lt;AIAgent&gt;(&quot;Redaktor&quot;);
+
+                            // Entry point: ChatClientAgent (DevUI wymaga tego)
+                            var entryAgent = new ChatClientAgent(chat, new ChatClientAgentOptions
+                            {
+                                Name = &quot;InputParser&quot;,
+                                ChatOptions = new()
+                                {
+                                    Instructions = &quot;&quot;&quot;
+                                        Jesteś parserem inputu. Użytkownik poda URL YouTube lub temat.
+                                        Wyodrębnij URL i powt&#243;rz go dokładnie.
+                                        Jeśli nie ma URL, powt&#243;rz temat dosłownie.
+                                        Nie dodawaj żadnych komentarzy ani wyjaśnień.
+                                        Odpowiedz JEDNYM zdaniem lub samym URL-em.
+                                        &quot;&quot;&quot;
+                                }
+                            });
+
+                            // Bridge: string → ResearchRequest (bo ResearcherExecutor oczekuje ResearchRequest)
+                            var inputBridge = new InputBridgeExecutor();
+
+                            // Executory
+                            var researcher = new ResearcherExecutor(researcherAgent);
+                            var copywriter = new CopywriterExecutor(copywriterAgent);
+                            var strateg = new StrategExecutor(strategAgent);
+                            var aggregator = new AggregatorExecutor();
+                            var redaktor = new RedaktorExecutor(redaktorAgent);
+                            var publisher = new PublishExecutor();
+
+                            IEnumerable&lt;ExecutorBinding&gt; fanInSources = [copywriter, strateg];
+
+                            // Graf: prosty, bez HITL
+                            // W workflow zamiast:
+                            //   entryAgent → inputBridge → researcher(executor)
+                            // Daj:
+                            //   entryAgent → researcherAgent(ChatClientAgent) → copywriter + strateg
+
+                            return new WorkflowBuilder(entryAgent)
+                                .WithName(key)
+                                .AddEdge(entryAgent, researcherAgent)    // ← sam agent, nie executor
+                                .AddFanOutEdge(researcherAgent, [copywriterAgent, strategAgent])
+                                .AddFanInBarrierEdge(
+                                    (IEnumerable&lt;ExecutorBinding&gt;)[copywriterAgent, strategAgent],
+                                    redaktorAgent)
+                                .WithOutputFrom(redaktorAgent)
+                                .Build();
+                        }).AddAsAIAgent();
+
+                        // ── OpenAI + DevUI ────────────────────────────────────────────────────────────
+
+                        builder.Services.AddOpenAIResponses();
+                        builder.Services.AddOpenAIConversations();
+                        builder.Logging.SetMinimumLevel(LogLevel.Debug);
+
+                        // ── Build &amp; Map ───────────────────────────────────────────────────────────────
+
+                        var app = builder.Build();
+
+                        // Middleware na wyjątki — PRZED endpointami
+                        app.Use(async (context, next) =&gt;
+                        {
+                            try
+                            {
+                                await next();
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine($&quot;[EXCEPTION] {ex}&quot;);
+                                Console.ResetColor();
+                                throw;
+                            }
+                        });
+
+                        app.MapOpenAIResponses();
+                        app.MapOpenAIConversations();
+
+                        if (app.Environment.IsDevelopment())
+                        {
+                            app.MapDevUI();
+                        }
+
+                        app.MapGet(&quot;/health&quot;, () =&gt; Results.Ok(new
+                        {
+                            status = &quot;healthy&quot;,
+                            pipeline = &quot;AiContentTeam — DevUI&quot;,
+                            devui = &quot;/devui&quot;,
+                            features = new[] { &quot;No HITL (dev)&quot;, &quot;Middleware&quot;, &quot;Guardrails&quot;, &quot;Fan-out/Fan-in&quot; }
+                        }));
+
+                        // ── Start ─────────────────────────────────────────────────────────────────────
+
+                        app.Urls.Add(&quot;http://localhost:5050&quot;);
+
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(&quot;╔════════════════════════════════════════════════════════════╗&quot;);
+                        Console.WriteLine(&quot;║  &#128640; AiContentTeam — DevUI Server                         ║&quot;);
+                        Console.WriteLine(&quot;║                                                           ║&quot;);
+                        Console.WriteLine(&quot;║  DevUI:       http://localhost:5050/devui                 ║&quot;);
+                        Console.WriteLine(&quot;║  Health:      http://localhost:5050/health                ║&quot;);
+                        Console.WriteLine(&quot;║                                                           ║&quot;);
+                        Console.WriteLine(&quot;║  Workflow:    content-pipeline-dev (no HITL)              ║&quot;);
+                        Console.WriteLine(&quot;║                                                           ║&quot;);
+                        Console.WriteLine(&quot;║  Pipeline:                                                ║&quot;);
+                        Console.WriteLine(&quot;║    InputParser → Bridge → Researcher                     ║&quot;);
+                        Console.WriteLine(&quot;║    → Copywriter + Strateg (fan-out)                      ║&quot;);
+                        Console.WriteLine(&quot;║    → Aggregator → Redaktor → Publisher                   ║&quot;);
+                        Console.WriteLine(&quot;║                                                           ║&quot;);
+                        Console.WriteLine(&quot;║  Middleware: Logging, Retry, Guardrails, Function Audit   ║&quot;);
+                        Console.WriteLine(&quot;╚════════════════════════════════════════════════════════════╝&quot;);
+                        Console.ResetColor();
+
+                        app.Run();
+
+                        // ── Tool helper ───────────────────────────────────────────────────────────────
+
+                        [System.ComponentModel.Description(&quot;Sprawdza popularne trendy na LinkedIn w kategorii tech/AI&quot;)]
+                        static string GetLinkedInTrends(
+                            [System.ComponentModel.Description(&quot;Kategoria, np. &#39;AI&#39;, &#39;.NET&#39;&quot;)] string category)
+                        {
+                            return $&quot;&quot;&quot;
+                                Top trendy w kategorii &quot;{category}&quot; (symulacja):
+                                1. Microsoft Agent Framework — wysoka aktywność
+                                2. .NET 10 Preview — umiarkowane zaangażowanie
+                                3. Multi-agent orchestration — rosnący trend
+                                &quot;&quot;&quot;;
+                        }
+
+                        // ══════════════════════════════════════════════════════════════════════════════
+                        //  InputBridgeExecutor — konwertuje string z ChatClientAgent na ResearchRequest
+                        // ══════════════════════════════════════════════════════════════════════════════
+
+                        /// &lt;summary&gt;
+                        /// Bridge między ChatClientAgent (zwraca string) a ResearcherExecutor (oczekuje ResearchRequest).
+                        /// Potrzebny bo DevUI wymaga ChatClientAgent jako entry point workflow.
+                        /// Produkcyjny Program.cs (konsolowy) nie potrzebuje tego — tam InputParserExecutor
+                        /// jest entry pointem i bezpośrednio tworzy ResearchRequest.
+                        /// &lt;/summary&gt;
+                        public partial class InputBridgeExecutor() : Executor&lt;string, ResearchRequest&gt;(&quot;InputBridge&quot;)
+                        {
+                            public override ValueTask&lt;ResearchRequest&gt; HandleAsync(
+                                string message,
+                                IWorkflowContext context,
+                                CancellationToken cancellationToken = default)
+                            {
+                                Console.WriteLine($&quot;[InputBridge] Parsing: &#39;{message}&#39;&quot;);
+
+                                return ValueTask.FromResult(new ResearchRequest(
+                                    YouTubeUrl: message.Trim(),
+                                    TargetAudience: &quot;polscy .NET developerzy, seniorzy i architekci&quot;));
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+           <section class="slide theme-black">
+        <figure>
+            <img class="cover" src="pictures/maf.png" alt="screenshot" />
+        </figure>
+    </section>
+    <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                A jak to za mało?
+        </span></span>
+    </section>
+        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                Zawsze też jest maszyna stanów z "statless"
+        </span></span>
+    </section>
+            <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+                albo maszyna stanów na pełnym gazie poprzez rozproszone zdarzenia
+        </span></span>
+    </section>
+        <section class="slide theme-dark tag-darkblue fullscreen">
+        <div class="layout-splitpoint">
+            <div class="split-image">
+                <img title="icon" src="pictures/icons/13.png" />
+            </div>
+            <div class="split-text">
+                <ol class="nonumbers">
+                    <li class="bold2">Forma rozproszonej maszyny stanów istnieje w jakieś formie w</li>
+                    <ol class="nonumbers">
+                        <li class="next">Wolverine / saga (stateful process manager / long-running workflow oparty na zdarzeniach i wiadomościach)</li>
+                        <li class="next">MassTransit Saga State Machine (event-driven state machine)</li>
+                        <li class="next">Workflow Core</li>
+                        <li class="next">Orleans (aktor/grain z trwałym stanem, który często naturalnie implementuje logikę maszyny stanów)</li>
+                    </ol>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                ale jeśli chcesz:
+            </p>
+            <p>
+                chcę widzieć przepływ procesu w jednym miejscu, bez sterowania wyjątkami i bez eventów udających kontrolę flow to
+                już wiesz jak to zrobić
+            </p>
+        </div>
+    </section>
+
     <section class="slide theme-gradient-green fullscreen">
         <div class="layout-hero">
             <div class="hero-top"></div>

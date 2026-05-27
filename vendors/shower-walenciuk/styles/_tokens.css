@@ -21,6 +21,8 @@
   --c-title-4:         #60ffea;
   --c-title-5:         #ff8060;     /* alias — extend as needed */
   --c-title-6:         #1d0092;
+  --c-title-7:         #2E1A47;
+  --c-title-8:       #0E65FF;
 
   /* ── Neutral Palette ───────────────────────────────────────────────────── */
   --c-dark:            #10151B;     /* near-black background */
@@ -67,6 +69,11 @@
   --tag-olive:         #cee68d;
   --tag-gold:          #e6ce8d;
   --tag-teal:          #8de3e6;
+  --tag-darkgreen:      #2F5500;
+    --tag-darkblue:      #0E65FF;
+  --tag-darkestblue:      #1D0092;
+  --tag-darkpurple:      #2E1A47;
+
 
   /* ── Code / Grid Borders ───────────────────────────────────────────────── */
   --c-border-code:     #b74000;     /* code-grid accent line */
