@@ -402,7 +402,7 @@
     <section class="slide theme-dark tag-darkblue fullscreen">
         <div class="layout-splitpoint">
             <div class="split-image">
-                <img title="icon" src="pictures/icons/09.png" />
+                <img title="icon" src="pictures/icons/01.png" />
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
@@ -485,8 +485,8 @@
                 <h2>Pipeline CSV File z klasami statycznymi</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         var filePipeline = Flow.Start()
                             .Then(StartTimingCommand.Run(bus))
                             .Then(OpenFileCommand.Run(bus))
@@ -515,8 +515,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         var filePipeline = Flow.Start()
                             .Then(new TimingCommand(bus))
                             .Then(new OpenFileCommand(bus))
@@ -545,8 +545,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         var flow = Flow.Start()
 
                             // cross-cutting
@@ -589,8 +589,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         var filePipeline = Flow.Start()
                             .Then(new TimingCommand(bus))
                             .Then(new OpenFileCommand(bus))
@@ -619,8 +619,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public class BatchPipeline
                         {
                             private readonly ScopedFlow _flow;
@@ -686,8 +686,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public abstract record PipelineEvent(string FilePath, DateTime Timestamp)
                         {
                             public record StepStarted(
@@ -754,8 +754,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public static class EventSubscribers
                         {
                             /// &lt;summary&gt;
@@ -850,8 +850,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public static class EventSubscribers
                         {
                             /// &lt;summary&gt;
@@ -946,8 +946,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         using Microsoft.Extensions.DependencyInjection;
                         using CsvBatchImporterDI;
                         using CsvBatchImporterDI.Commands;
@@ -1170,8 +1170,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         /// &lt;summary&gt;
                         /// Mutowalny kontekst przepływu — każdy polecenie czyta/pisze swoje pola.
                         /// Jeśli Error != null, kolejne polecenia powinny się pominąć.
@@ -1239,8 +1239,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         /// &lt;summary&gt;
                         /// KafkaFlow middleware for batched inventory sync messages.
                         /// Uses AddBatching + WithManualMessageCompletion.
@@ -1388,8 +1388,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         using KafkaFlow;
                         using KafkaFlow.Serializer;
                         using KafkaPipeline.ConsumerDI;
@@ -1542,8 +1542,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public class InventorySyncContext
                         {
                             public string   BatchId             { get; set; } = Guid.NewGuid().ToString(&quot;N&quot;)[..8];
@@ -1572,8 +1572,8 @@
                 <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public class InventorySyncContext
                         {
                             public string   BatchId             { get; set; } = Guid.NewGuid().ToString(&quot;N&quot;)[..8];
@@ -1619,8 +1619,8 @@
                 <h2>Union type</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         OneOf&lt;User, Error&gt;
                         OneOf&lt;User, NotFound, ValidationError&gt;
                         OneOf&lt;Success, Failure&gt;
@@ -1645,8 +1645,8 @@
                 <h2>OneOf Triple</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         /// &lt;summary&gt;
                         /// Extension methods dla OneOf&amp;lt;TSuccess, TFailure, TEmpty&amp;gt; — trzy ścieżki:
                         ///   T0 = sukces → kontynuuj łańcuch
@@ -1731,8 +1731,8 @@
                 <h2>OneOf Triple</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         public static class CompositionRoot
                         {
                             public static IServiceProvider CreateServices()
@@ -1770,8 +1770,8 @@
                 <h2>OneOf Triple</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         using Microsoft.Extensions.DependencyInjection;
                         using CsvImporter;
                         using CsvImporter.Models;
@@ -2006,8 +2006,8 @@
                 <h2>Microsoft Agent Framework 1.0</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 29px; overflow: hidden;">
-                    <code style="line-height: 29px !important;" class="language-cs">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
                         using AiContentTeam;
                         using AiContentTeam.Guardrails;
                         using AiContentTeam.Middleware;
@@ -2364,7 +2364,7 @@
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
-                    <li class="bold2">Forma rozproszonej maszyny stanów istnieje w jakiejś formie w</li>
+                    <li class="bold2">Forma rozproszonej maszyny stanów </li>
                     <ol class="nonumbers">
                         <li class="next">Wolverine / saga (stateful process manager / long-running workflow oparty na zdarzeniach i wiadomościach)</li>
                         <li class="next">MassTransit Saga State Machine (event-driven state machine)</li>
