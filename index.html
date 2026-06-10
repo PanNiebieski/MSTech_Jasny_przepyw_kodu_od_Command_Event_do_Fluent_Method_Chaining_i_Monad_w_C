@@ -1624,10 +1624,12 @@
                 <h2>OneOf jako union type w C#</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 19px; overflow: hidden;">
-                    <code style="line-height: 19px !important;" class="language-cs">
+                <pre style="font-size: 39px; overflow: hidden;">
+                    <code style="line-height: 39px !important;" class="language-cs">
                         OneOf&lt;User, Error&gt;
+
                         OneOf&lt;User, NotFound, ValidationError&gt;
+                        
                         OneOf&lt;Success, Failure&gt;
                     </code>
                 </pre>
@@ -2335,7 +2337,7 @@
                     <li class="bold2">Podobne rozwiązania tych problemów widziałem już</li>
                     <ol class="nonumbers">
                         <li class="next">W Microsoft Agent Framework 1.0, który służy do tworzenia przepływu działań agentów i deterministycznego kodu</li>
-                        <li class="next">MAF ma dwa rodzaje klocków: executory</li>
+                        <li class="next">MAF ma dwa rodzaje klocków: executory i middleware</li>
                     </ol>
                 </ol>
             </div>
@@ -2351,7 +2353,7 @@
                     <li class="bold2">MAF ma dwa rodzaje klocków:</li>
                     <ol class="nonumbers">
                         <li class="next">Executory, czyli coś jak "Command" w tej prezentacji, które uruchamiają kod deterministyczny lub agentowy LLM</li>
-                        <li class="next">MAF na 3 poziomach daje możliwość wstrzykiwania middleware, aby badać wyniki agentów albo strzałów do MCP</li>
+                        <li class="next">Middleware, które pozwalają na wstrzykiwanie dodatkowej logiki do przepływu agentów</li>
                     </ol>
                 </ol>
             </div>
@@ -2360,7 +2362,7 @@
            <section class="slide theme-dark tag-darkblue fullscreen">
         <div class="layout-splitpoint">
             <div class="split-image">
-                <img title="icon" src="pictures/icons/13.png" />
+                <img title="icon" src="pictures/icons/12.png" />
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
