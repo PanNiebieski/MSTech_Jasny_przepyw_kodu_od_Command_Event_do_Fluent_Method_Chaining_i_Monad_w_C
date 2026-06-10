@@ -55,7 +55,7 @@
         <div class="details">
           
             <h2 class="bigbig"><strong style="font-size: 35px; line-height: 1.3;">
-                <span class="tc-7">Jasny przepływ kodu :</span><br />
+                <span class="tc-7">Jasny przepływ kodu:</span><br />
                 <span class="tc-6">od Command-Event </span><br />
                 <span class="tc-7">do Fluent Method Chaining</span><br />
                 <span class="tc-8">i Monad w C#</span>
@@ -127,8 +127,8 @@
                 <ol class="nonumbers">
                     <li class="bold2">Od momentu startu</li>
                     <ol class="nonumbers">
-                        <li class="next">Dla aplikacji konsolowej to Program.cs i co robi 1,2,3</li>
-                        <li class="next">Dla REST/gRPC API a patrzę w endpointy</li>
+                        <li class="next">Dla aplikacji konsolowej to Program.cs i sprawdzam, co robi: 1, 2, 3</li>
+                        <li class="next">Dla REST/gRPC API patrzę w endpointy</li>
                         <li class="next">Dla kolejki Kafka, RabbitMQ patrzę na handlery</li>
                     </ol>
                 </ol>
@@ -155,7 +155,7 @@
                     <li class="bold2">Vertical Slices mówi nam, że przy pomocy</li>
                     <ol class="nonumbers">
                         <li class="next">Układów projektów</li>
-                        <li class="next">Nazwy Folderów</li>
+                        <li class="next">Nazw folderów</li>
                         <li class="next">Nazw klas</li>
                         <li class="next">Nazw metod</li>
                     </ol>
@@ -181,9 +181,9 @@
             <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-                W Domain Driven Design mamy "Ubiquitous Language" wspólny język między biznesem a programistami
+                W Domain Driven Design mamy "Ubiquitous Language", czyli wspólny język między biznesem a programistami
                 <br /><br />
-                Tak żebyś wiedział gdzie szukać tego w kodzie gdy ktoś biznesowo opisze Ci problem z daną aplikacją
+                Tak żebyś wiedział, gdzie szukać tego w kodzie, gdy ktoś biznesowo opisze Ci problem z daną aplikacją
             </p>
         </div>
     </section>
@@ -204,7 +204,7 @@
                         <li class="next">MediatR</li>
                         <li class="next">Który był przepływem klas Command -> Event -> Command -> CompletedEvent</li>
                         <li class="next">Każda klasa robiła tylko jedną rzecz</li>
-                        <li class="next">Każdy błędny przypadek "pojedynczy" i "całościowy" miał swoje własny Event</li>
+                        <li class="next">Każdy błędny przypadek "pojedynczy" i "całościowy" miał swój własny Event</li>
                     </ol>
                 </ol>
             </div>
@@ -216,9 +216,9 @@
                 <strong>Wniosek 2:</Strong>
             </p>
             <p>
-                Spodobało mi się to, ze w tym kodzie nie wyrzucałem wyjątków.
+                Spodobało mi się to, że w tym kodzie nie wyrzucałem wyjątków.
                 <br /><br />
-                Miałem "Rezultaty" które mówiły mi czy dane polecenie się wykonało czy nie i co poszło nie tak
+                Miałem "Rezultaty", które mówiły mi, czy dane polecenie się wykonało, czy nie, i co poszło nie tak
                 <br /><br />
                 Nie sterowałem przepływem wyjątkami
             </p>
@@ -248,7 +248,7 @@
             </p>
             <p>
                 "Zdarzenia" na pewno nie powinny sterować przepływem.<br /><br />
-                "Zdarzenia" czy strumień zdarzeń powinno dać możliwość podpinania dodatkowego kodu
+                "Zdarzenia" czy strumień zdarzeń powinny dawać możliwość podpinania dodatkowego kodu,
                 gdy dane polecenie się wykonało.
             </p>
         </div>
@@ -262,7 +262,7 @@
                 <ol class="nonumbers">
                     <li class="bold2">Drugi problem</li>
                     <ol class="nonumbers">
-                        <li class="next">Przepływ klas które polecenie wywołuje które nie było oczywiste</li>
+                        <li class="next">Przepływ klas, czyli które polecenie wywołuje które, nie był oczywisty</li>
                         <li class="next">Wymagało przejrzenia każdej klasy</li>
                     </ol>
                 </ol>
@@ -275,7 +275,7 @@
                 <strong>Wniosek 4:</Strong>
             </p>
             <p>
-                Nieważne "jak" muszę mieć w 1 miejscu w kodzie widok przepływu kodu
+                Nieważne "jak", muszę mieć w jednym miejscu w kodzie widok przepływu kodu
             </p>
         </div>
     </section>
@@ -288,7 +288,7 @@
                 <ol class="nonumbers">
                     <li class="bold2">Trzeci problem</li>
                     <ol class="nonumbers">
-                        <li class="next">Trzeba było dużo refaktoryzować jeśli doszło nowe polecenie po środku</li>
+                        <li class="next">Trzeba było dużo refaktoryzować, jeśli doszło nowe polecenie w środku</li>
                         <li class="next">Typy zwracane wymuszały specyficzną kolejność działań</li>
                     </ol>
                 </ol>
@@ -301,7 +301,7 @@
                 <strong>Wniosek 5:</Strong>
             </p>
             <p>
-                O ile to możliwe stworzyć polecenia jak klocki Lego które mogę dowolnie zmieniać kolejność.
+                O ile to możliwe, stworzyć polecenia jak klocki Lego, którym mogę dowolnie zmieniać kolejność.
                 <br /><br /> Chociaż wiem, że ma to swoją cenę
             </p>
         </div>
@@ -312,7 +312,7 @@
                 <strong>Wniosek 6:</Strong>
             </p>
             <p>
-                Zobaczyłem potrzebę podziału na przepływu per "jeden element", per "cały batch", a w tym rozwiązaniu średnio to było widać
+                Zobaczyłem potrzebę podziału przepływu per "jeden element" i per "cały batch", a w tym rozwiązaniu średnio to było widać
             </p>
         </div>
     </section>
@@ -323,13 +323,13 @@
     </section>
        <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            ale jak to? Przecież użyłem MediatR
+            Ale jak to? Przecież użyłem MediatR
         </span></span>
     </section>
         <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-                O ile po nazwie można było wszystko znaleźć to najbardziej bolesne było brak czytelności zrozumienia przepływu kodu
+                O ile po nazwie można było wszystko znaleźć, to najbardziej bolesny był brak czytelności i zrozumienia przepływu kodu
             </p>
         </div>
     </section>
@@ -345,7 +345,7 @@
                         <li class="next">W jednym miejscu widzieć cały przepływ kodu</li>
                         <li class="next">Zwracać zawsze "rezultaty" i nie sterować aplikacją wyjątkami</li>
                         <li class="next">Zmieniać kolejność działań bez konieczności zmiany struktury kodu</li>
-                        <li class="next">Jeśli trzeba emitować zdarzenia aby łatwo było dodać warstwę logującą oraz statystyki</li>
+                        <li class="next">Jeśli trzeba, emitować zdarzenia, aby łatwo było dodać warstwę logującą oraz statystyki</li>
                     </ol>
                 </ol>
             </div>
@@ -360,7 +360,7 @@
                 <ol class="nonumbers">
                     <li class="bold2">Czego chcę od mojego kodu</li>
                     <ol class="nonumbers">
-                        <li class="next">Świadomość tego, że coś będzie się dla listy elementów, a coś dla pojedynczego elementu</li>
+                        <li class="next">Świadomość tego, że coś będzie się działo dla listy elementów, a coś dla pojedynczego elementu</li>
                     </ol>
                 </ol>
             </div>
@@ -375,10 +375,10 @@
                         <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-               Zaraz to naprawdę nie wyjątków
+               Zaraz, naprawdę bez wyjątków?
             </p>
             <p>
-                Wyjątki można wyrzucać tylko gdy nastąpił błąd krytyczny i chcecie wyłączyć bądź zablokować całą aplikację 
+                Wyjątki można wyrzucać tylko wtedy, gdy nastąpił błąd krytyczny i chcecie wyłączyć bądź zablokować całą aplikację 
             </p>
         </div>
     </section>
@@ -392,10 +392,10 @@
         <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-                <strong>Scentralizowane i widoczny przepływ kodu to jest to</Strong>
+                <strong>Scentralizowany i widoczny przepływ kodu to jest to</Strong>
             </p>
             <p>
-               To usunie potrzebę kminienia jak projekty, foldery, pliki powinny być ułożone, bo będzie to widać w 1 miejscu w starcie aplikacji
+               To usunie potrzebę kminienia, jak projekty, foldery i pliki powinny być ułożone, bo będzie to widać w jednym miejscu, na starcie aplikacji
             </p>
         </div>
     </section>
@@ -408,8 +408,8 @@
                 <ol class="nonumbers">
                     <li class="bold2">Od momentu startu</li>
                     <ol class="nonumbers">
-                        <li class="next">Dla aplikacji konsolowej to Program.cs i co robi 1,2,3</li>
-                        <li class="next">Dla REST/gRPC API a patrzę w endpointy</li>
+                        <li class="next">Dla aplikacji konsolowej to Program.cs i sprawdzam, co robi: 1, 2, 3</li>
+                        <li class="next">Dla REST/gRPC API patrzę w endpointy</li>
                         <li class="next">Dla kolejki Kafka, RabbitMQ patrzę na handlery</li>
                     </ol>
                 </ol>
@@ -431,8 +431,8 @@
                     <li class="bold2">Przykład demo</li>
                     <ol class="nonumbers">
                         <li class="next">Będzie dostawać listę linków do plików CSV</li>
-                        <li class="next">Coś przejdzie przez proces coś nie przejdzie, coś przefiltruje wszystkie elementy i musimy wiedzieć co i dlaczego</li>
-                        <li class="next">Wydzielić kod na powtarzający się na framework i potrzebny potok</li>
+                        <li class="next">Coś przejdzie przez proces, coś nie przejdzie, coś przefiltruje wszystkie elementy i musimy wiedzieć, co i dlaczego</li>
+                        <li class="next">Wydzielić powtarzający się kod do frameworka i zostawić potrzebny potok</li>
                         <li class="next">Proces nie będzie liniowy</li>
                     </ol>
                 </ol>
@@ -455,12 +455,12 @@
                 <strong>Wniosek 7:</Strong>
             </p>
             <p>
-               Nie ma co się trzymać się sztywno pewnych zasad. Dla Railway Oriented programming by nam powiedział, 
+               Nie ma co trzymać się sztywno pewnych zasad. Railway Oriented Programming powiedziałby nam, 
                że metody muszą się nazywać "Bind", "Map", "Match" i mieć konkretne sygnatury. 
                <br /><br />
-               albo mieć klasy "Maybe", "Either"
+               Albo mieć klasy "Maybe", "Either"
                <br/><br />
-               Ale to nie jest ważne, ważne jest żeby mieć czytelny przepływ kodu
+               Ale to nie jest ważne. Ważne jest, żeby mieć czytelny przepływ kodu
             </p>
         </div>
     </section>
@@ -470,7 +470,7 @@
                Tutaj wstaw wykład na temat "Monad"
             </p>
             <p>
-                Jednak wiem, że ten "wykład" nic nie będzie wnosić
+                Jednak wiem, że ten "wykład" nic nie wniesie
             </p>
         </div>
     </section>
@@ -482,7 +482,7 @@
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami statycznymi</h2>
+                <h2>Wariant 1: fluent flow z metodami statycznymi</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -512,7 +512,7 @@
         <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Wariant 2: fluent flow z instancjami komend</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -542,7 +542,7 @@
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Wariant 3: flow z DI i typami komend</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -586,7 +586,7 @@
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Rozgałęzienie i równoległe kroki w pipeline</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -616,7 +616,7 @@
                 <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>BatchPipeline: potok dla wielu plików</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -683,7 +683,7 @@
                 <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Zdarzenia potoku i prosty EventBus</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -751,7 +751,7 @@
     <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Subskrybent: logowanie kroków w konsoli</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -847,7 +847,7 @@
         <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Subskrybent: zbieranie metryk potoku</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -943,7 +943,7 @@
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Composition root: cały flow w jednym miejscu</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1161,19 +1161,19 @@
     </section>
     <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-                To co pozwala na wymianę kolejności poleceń jest to
+                To, co pozwala na wymianę kolejności poleceń, to
         </span></span>
     </section>
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>PipelineContext: mutowalny stan i trzy ścieżki</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
                     <code style="line-height: 19px !important;" class="language-cs">
                         /// &lt;summary&gt;
-                        /// Mutowalny kontekst przepływu — każdy polecenie czyta/pisze swoje pola.
+                        /// Mutowalny kontekst przepływu — każde polecenie czyta/pisze swoje pola.
                         /// Jeśli Error != null, kolejne polecenia powinny się pominąć.
                         /// &lt;/summary&gt;
                         public class PipelineContext
@@ -1221,10 +1221,10 @@
     <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-               Z wbudowaną obsługą "statystk", "drukowaniem przepływu w konsoli", "tworzeniem pliku logu per nazwany pipeline z Serilog",
+               Z wbudowaną obsługą "statystyk", "drukowania przepływu w konsoli" i "tworzenia pliku logu per nazwany pipeline z Serilog",
             </p>
             <p>
-               oraz z Circuit Breakerem który blokuje cały pipeline jeśli jest więcej błędów niż "N"
+               oraz z Circuit Breakerem, który blokuje cały pipeline, jeśli jest więcej błędów niż "N"
             </p>
         </div>
     </section>
@@ -1236,7 +1236,7 @@
             <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>KafkaFlow: batch handler jako wejście do potoku</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1385,7 +1385,7 @@
                 <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>KafkaFlow: konfiguracja konsumera i DI</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1539,7 +1539,7 @@
                     <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Kontekst z wieloma kolekcjami po krokach</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1569,7 +1569,7 @@
                         <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Pipeline CSV File z klasami instancyjnymi new</h2>
+                <h2>Prostszy kontekst: jedna kolekcja robocza</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1616,7 +1616,7 @@
           <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Union type</h2>
+                <h2>OneOf jako union type w C#</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1636,13 +1636,13 @@
     </section>
             <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-            Na pewno jest to najlepszy sposób na symulowanie Union types w C#
+            Na pewno jest to najlepszy sposób na symulowanie union types w C#
         </span></span>
     </section>
    <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>OneOf Triple</h2>
+                <h2>OneOf&lt;Success, Failure, Empty&gt;: trzy ścieżki</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1728,7 +1728,7 @@
    <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>OneOf Triple</h2>
+                <h2>Rejestracja kroków pipeline'u w DI</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1767,7 +1767,7 @@
         <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>OneOf Triple</h2>
+                <h2>Uruchomienie pipeline'u z OneOf</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -1961,8 +1961,8 @@
                 <ol class="nonumbers">
                     <li class="bold2">Podobne rozwiązania tych problemów widziałem już</li>
                     <ol class="nonumbers">
-                        <li class="next">W Microsoft Agent Framework 1.0 : który służy do tworzenia przepływu działań agentów i deterministycznego kodu</li>
-                        <li class="next">MAF ma dwa rodzaje klocków : Executory</li>
+                        <li class="next">W Microsoft Agent Framework 1.0, który służy do tworzenia przepływu działań agentów i deterministycznego kodu</li>
+                        <li class="next">MAF ma dwa rodzaje klocków: executory</li>
                     </ol>
                 </ol>
             </div>
@@ -1975,10 +1975,10 @@
             </div>
             <div class="split-text">
                 <ol class="nonumbers">
-                    <li class="bold2">MAF ma dwa rodzaje klocków : </li>
+                    <li class="bold2">MAF ma dwa rodzaje klocków:</li>
                     <ol class="nonumbers">
-                        <li class="next">Executory czyli coś jak "Command" w tej prezentacji który uruchamia kod deterministyczny lub Agentowy LLM</li>
-                        <li class="next">MAF na 3 poziomach daje możliwość wstrzykiwania middleware aby badać wyniki Agentów albo strzałów do MCP</li>
+                        <li class="next">Executory, czyli coś jak "Command" w tej prezentacji, które uruchamiają kod deterministyczny lub agentowy LLM</li>
+                        <li class="next">MAF na 3 poziomach daje możliwość wstrzykiwania middleware, aby badać wyniki agentów albo strzałów do MCP</li>
                     </ol>
                 </ol>
             </div>
@@ -1993,8 +1993,8 @@
                 <ol class="nonumbers">
                     <li class="bold2">MAF a kolejność executorów w workflow</li>
                     <ol class="nonumbers">
-                        <li class="next">Executory definuje co przychodzi o co wychodzia</li>
-                        <li class="next">A spójność przepływu z definiowanym "workflow" pilnuje wygenerowany kod przez source generators, więc przy kompilacji wiesz co nie działa</li>
+                        <li class="next">Executory definiują, co przychodzi i co wychodzi</li>
+                        <li class="next">A spójności przepływu z definiowanym "workflow" pilnuje kod wygenerowany przez source generators, więc przy kompilacji wiesz, co nie działa</li>
                     </ol>
                 </ol>
             </div>
@@ -2003,7 +2003,7 @@
     <section class="slide prism over bhgry">
         <div class="layout-code">
             <div class="code-header variant-white">
-                <h2>Microsoft Agent Framework 1.0</h2>
+                <h2>MAF: workflow agentów w kodzie</h2>
             </div>
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
@@ -2354,7 +2354,7 @@
     </section>
             <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
-                albo maszyna stanów na pełnym gazie poprzez rozproszone zdarzenia
+                Albo maszyna stanów na pełnym gazie poprzez rozproszone zdarzenia
         </span></span>
     </section>
         <section class="slide theme-dark tag-darkblue fullscreen">
@@ -2378,11 +2378,11 @@
     <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-                ale jeśli chcesz:
+                Ale jeśli chcesz:
             </p>
             <p>
-                chcę widzieć przepływ procesu w jednym miejscu, bez sterowania wyjątkami i bez eventów udających kontrolę flow to
-                już wiesz jak to zrobić
+                widzieć przepływ procesu w jednym miejscu, bez sterowania wyjątkami i bez eventów udających kontrolę flow,
+                to już wiesz, jak to zrobić
             </p>
         </div>
     </section>
