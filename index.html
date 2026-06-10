@@ -1588,6 +1588,11 @@
             </div>
         </div>
     </section>
+                    <section class="slide theme-black" style="background-color: white">
+        <figure>
+            <img class="cover" src="pictures/Flow.png" alt="screenshot" />
+        </figure>
+    </section>
     <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
             Już ktoś przygotował rozwiązanie "funkcyjne" w C#
@@ -1632,6 +1637,11 @@
         <section class="slide theme-dark tag-darkblue  decor-corners2">
         <span class="shout colors"><span>
             Czy to jest ta słynna "monada"?
+        </span></span>
+    </section>
+            <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Monada to pudełko z wartością oraz regułą: "co wolno zrobić dalej"
         </span></span>
     </section>
             <section class="slide theme-dark tag-darkblue  decor-corners2">
@@ -1945,6 +1955,369 @@
                         Console.WriteLine(allErrors.Count == 0 &amp;&amp; skipped.Count == 0 ? &quot;Batch OK.&quot;
                             : imports.Count &gt; 0 ? &quot;Częściowy sukces.&quot; : &quot;Batch failed.&quot;);
                         Console.ResetColor();
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+                <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Jest tutaj jedna duża róźnica
+        </span></span>
+    </section>
+                    <section class="slide theme-black" style="background-color: white">
+        <figure>
+            <img class="cover" src="pictures/OneOfUnion.png" alt="screenshot" />
+        </figure>
+    </section>
+                <section class="slide theme-black" style="background-color: white">
+        <figure>
+            <img class="cover" src="pictures/Roznica.png" alt="screenshot" />
+        </figure>
+    </section>
+ 
+    <section class="slide theme-black" style="background-color:white">
+        <figure>
+            <img class="cover" src="pictures/railwayMY.png" alt="screenshot" />
+        </figure>
+    </section>
+                <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <span class="shout colors"><span>
+            Podobny przykład można napisać w C# 15 który ma już union types
+        </span></span>
+    </section>
+
+            <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Typ union </h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
+                       /// &lt;summary&gt;
+                        /// Natywny union type z C# 15 preview.
+                        /// Zastępuje OneOf&amp;lt;ImportContext, Failure, NoItemsToProcess&amp;gt;.
+                        /// &lt;/summary&gt;
+                        public union PipelineResult(ImportContext, Failure, NoItemsToProcess);
+
+                        /// &lt;summary&gt;
+                        /// Obiekt stanu przepływu — niesiony przez cały łańcuch Then().
+                        ///
+                        /// Trzy możliwe wyniki:
+                        ///   ImportContext    — sukces, kontynuuj
+                        ///   Failure          — błąd, przerwij
+                        ///   NoItemsToProcess — pusta kolekcja po filtrze, przerwij (ale to nie błąd)
+                        /// &lt;/summary&gt;
+                        public record ImportContext
+                        {
+                            public required string FilePath { get; init; }
+
+                            public FileInfo? DetectedFile { get; set; }
+                            public string Extension { get; set; } = &quot;&quot;;
+                            public string Encoding { get; set; } = &quot;UTF-8&quot;;
+                            public char Delimiter { get; set; } = &#39;,&#39;;
+                            public string Schema { get; set; } = &quot;Unknown&quot;;
+                            public string[] Header { get; set; } = [];
+                            public List&lt;CsvRow&gt; ParsedRows { get; set; } = [];
+                            public List&lt;CsvRow&gt; ValidRows { get; set; } = [];
+                            public List&lt;RowError&gt; ValidationErrors { get; set; } = [];
+                            public List&lt;MappedEntity&gt; Entities { get; set; } = [];
+                            public ImportResult? Result { get; set; }
+
+                            public Dictionary&lt;string, string&gt; Metadata { get; set; } = [];
+                            public List&lt;TraceEntry&gt; Trace { get; set; } = [];
+
+                            public void AddTrace(string step, string detail, TimeSpan duration)
+                                =&gt; Trace.Add(new TraceEntry(step, detail, duration));
+
+                            /// &lt;summary&gt;Punkt wejścia łańcucha — tworzy kontekst opakowany w PipelineResult.&lt;/summary&gt;
+                            public static Task&lt;PipelineResult&gt; Create(string filePath)
+                                =&gt; Task.FromResult&lt;PipelineResult&gt;(new ImportContext { FilePath = filePath });
+                        }
+
+                        public record CsvRow(int LineNumber, string[] Fields);
+                        public record RowError(int LineNumber, string Reason);
+                        public record MappedEntity(string Id, Dictionary&lt;string, string&gt; Fields);
+                        public record ImportResult(string FilePath, int RowsSaved, int RowsSkipped);
+                        public record TraceEntry(string Step, string Detail, TimeSpan Duration);
+
+                        public record FileError(string Path, string Reason);
+                        public record BatchReport(int Total, int Succeeded, int Failed,
+                            List&lt;ImportResult&gt; Imports, List&lt;FileError&gt; Errors);
+
+                        /// &lt;summary&gt;
+                        /// Bazowy typ błędu — wariant Failure w PipelineResult.
+                        /// Pierwszy Failure zwr&#243;cony przez krok przerywa cały łańcuch.
+                        /// &lt;/summary&gt;
+                        public record Failure(string Step, string Reason)
+                        {
+                            public override string ToString() =&gt; $&quot;[{Step}] {Reason}&quot;;
+                        }
+
+                        // Konkretne typy — można matchować pattern matchingiem
+                        public record FileNotFoundFailure(string Path)
+                            : Failure(&quot;OpenFile&quot;, $&quot;File not found: {Path}&quot;);
+
+                        public record UnsupportedTypeFailure(string Extension)
+                            : Failure(&quot;DetectType&quot;, $&quot;Unsupported file type: &#39;{Extension}&#39;&quot;);
+
+                        public record DelimiterFailure()
+                            : Failure(&quot;DetectDelimiter&quot;, &quot;Cannot detect delimiter. Tried: , ; \\t |&quot;);
+
+                        public record UnknownSchemaFailure(string[] Columns)
+                            : Failure(&quot;DetectSchema&quot;, $&quot;Unknown schema. Columns: [{string.Join(&quot;, &quot;, Columns)}]&quot;);
+
+                        public record EmptyFileFailure()
+                            : Failure(&quot;ParseCsv&quot;, &quot;File is empty or has only a header row.&quot;);
+
+                        public record ValidationFailure(int ErrorCount)
+                            : Failure(&quot;ValidateRows&quot;, $&quot;{ErrorCount} validation errors&quot;);
+
+                        public record MappingFailure(string Detail)
+                            : Failure(&quot;MapEntities&quot;, Detail);
+
+                        public record SaveFailure(string Detail)
+                            : Failure(&quot;SaveBatch&quot;, Detail);
+
+                        // ── Trzecia ścieżka — ani błąd, ani sukces ──────────────────────
+
+                        /// &lt;summary&gt;
+                        /// Filtrowanie usunęło wszystkie wiersze — dalszy przepływ nie ma sensu.
+                        /// To NIE jest błąd (plik był poprawny), to informacja o pustym wyniku.
+                        /// &lt;/summary&gt;
+                        public record NoItemsToProcess(string Step, string Reason, ImportContext Context)
+                        {
+                            public override string ToString() =&gt; $&quot;[{Step}] {Reason}&quot;;
+                        }
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+               <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Uruchomienie pipeline'u z Union w C# 15</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
+                        foreach (var path in existingPaths)
+                        {
+                            Console.WriteLine($&quot;\n  Plik: {Path.GetFileName(path)}&quot;);
+
+                            await using var scope = services.CreateAsyncScope();
+                            var sp = scope.ServiceProvider;
+
+                            var file       = sp.GetRequiredService&lt;FileSteps&gt;();
+                            var validation = sp.GetRequiredService&lt;ValidationSteps&gt;();
+                            var mapping    = sp.GetRequiredService&lt;MappingSteps&gt;();
+                            var persistence= sp.GetRequiredService&lt;PersistenceSteps&gt;();
+                            var orders     = sp.GetRequiredService&lt;OrderSteps&gt;();
+                            var sales      = sp.GetRequiredService&lt;SalesSteps&gt;();
+                            var users      = sp.GetRequiredService&lt;UserSteps&gt;();
+                            var products   = sp.GetRequiredService&lt;ProductSteps&gt;();
+                            var enrichment = sp.GetRequiredService&lt;EnrichmentSteps&gt;();
+
+                            // ── Cały przepływ ─────────────────────────────
+                            var result = await ImportContext.Create(path)
+
+                                // wsp&#243;lne kroki wejściowe
+                                .ThenAsync(file.OpenFile)
+                                .ThenAsync(file.ParseCsv)
+                                .ThenAsync(validation.ValidateRows)              // → może: NoItemsToProcess
+                                .ThenAsync(validation.Deduplicate)                // → może: NoItemsToProcess
+
+                                // rozgałęzienie per schemat
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Orders&quot;,   orders.CalcTotals)
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Sales&quot;,    sales.ConvertCurrency)
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Users&quot;,    users.ValidateEmails)    // → może: NoItemsToProcess
+                                .IfThen(ctx =&gt; ctx.Schema == &quot;Products&quot;, products.ValidateStock)
+
+                                // wsp&#243;lne kroki wyjściowe
+                                .ThenAsync(mapping.MapEntities)
+                                .ThenWaitForAll(&quot;Enrichment&quot;, enrichment.GeoLookup, enrichment.AuditStamp)
+                                .ThenAsync(persistence.SaveBatch);
+
+                            // ── Obsługa trzech ścieżek union ──────────────
+                            switch (result)
+                            {
+                                case ImportContext ctx:
+                                {
+                                    // Sukces
+                                    foreach (var t in ctx.Trace)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.Green;
+                                        Console.Write($&quot;    ✓ {t.Step,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {t.Duration.TotalMilliseconds,6:F1}ms  {t.Detail}&quot;);
+                                    }
+                                    imports.Add(ctx.Result!);
+                                    break;
+                                }
+
+                                case Failure failure:
+                                {
+                                    // Błąd = łańcuch przerwany
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine($&quot;    ✗ [{failure.Step}] {failure.Reason}&quot;);
+                                    Console.ResetColor();
+                                    errors.Add(new FileError(path, failure.Reason));
+                                    break;
+                                }
+
+                                case NoItemsToProcess noItems:
+                                {
+                                    // ○ Puste — plik poprawny, ale 0 wierszy po filtrze
+                                    // Wypisz trace z krok&#243;w kt&#243;re się wykonały PRZED przerwaniem
+                                    foreach (var t in noItems.Context.Trace)
+                                    {
+                                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                                        Console.Write($&quot;    ✓ {t.Step,-22}&quot;);
+                                        Console.ResetColor();
+                                        Console.WriteLine($&quot; {t.Duration.TotalMilliseconds,6:F1}ms  {t.Detail}&quot;);
+                                    }
+                                    Console.ForegroundColor = ConsoleColor.Yellow;
+                                    Console.WriteLine($&quot;    ○ {noItems}&quot;);
+                                    Console.ResetColor();
+                                    skipped.Add((path, noItems.Reason));
+                                    break;
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </section>
+                   <section class="slide prism over bhgry">
+        <div class="layout-code">
+            <div class="code-header variant-white">
+                <h2>Extension methods z Union w C# 15</h2>
+            </div>
+            <div class="code-body canscroll">
+                <pre style="font-size: 19px; overflow: hidden;">
+                    <code style="line-height: 19px !important;" class="language-cs">
+                        using CsvBatchImporterCSharp15Union.Models;
+
+                        namespace CsvBatchImporterCSharp15Union;
+
+                        /// &lt;summary&gt;
+                        /// Extension methods dla PipelineResult union — trzy ścieżki:
+                        ///   ImportContext     = sukces → kontynuuj łańcuch
+                        ///   Failure           = failure → przerwij (błąd)
+                        ///   NoItemsToProcess  = empty → przerwij (brak element&#243;w, nie błąd)
+                        ///
+                        /// Wzorowane na monadycznym chainingu, ale bez zewnętrznego pakietu.
+                        /// &lt;/summary&gt;
+                        public static class UnionPipelineExtensions
+                        {
+                            /// &lt;summary&gt;
+                            /// Then — wykonaj następny krok jeśli sukces, inaczej propaguj failure/empty.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;PipelineResult&gt; ThenAsync(
+                                this Task&lt;PipelineResult&gt; currentResult,
+                                Func&lt;ImportContext, Task&lt;PipelineResult&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                return result switch
+                                {
+                                    ImportContext ctx =&gt; await nextJob(ctx),
+                                    Failure failure =&gt; failure,
+                                    NoItemsToProcess noItems =&gt; noItems,
+                                    null =&gt; throw new InvalidOperationException(&quot;PipelineResult cannot be null.&quot;)
+                                };
+                            }
+
+                            /// &lt;summary&gt;
+                            /// IfThen — wykonaj krok TYLKO gdy predykat == true i jest sukces.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;PipelineResult&gt; IfThen(
+                                this Task&lt;PipelineResult&gt; currentResult,
+                                Func&lt;ImportContext, bool&gt; condition,
+                                Func&lt;ImportContext, Task&lt;PipelineResult&gt;&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                return result switch
+                                {
+                                    ImportContext ctx when condition(ctx) =&gt; await nextJob(ctx),
+                                    ImportContext ctx =&gt; ctx,
+                                    Failure failure =&gt; failure,
+                                    NoItemsToProcess noItems =&gt; noItems,
+                                    null =&gt; throw new InvalidOperationException(&quot;PipelineResult cannot be null.&quot;)
+                                };
+                            }
+
+                            /// &lt;summary&gt;
+                            /// ThenWaitForAll — wykonaj kilka niezależnych krok&#243;w r&#243;wnolegle jeśli bieżący wynik to sukces.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;PipelineResult&gt; ThenWaitForAll(
+                                this Task&lt;PipelineResult&gt; currentResult,
+                                string name,
+                                params Func&lt;ImportContext, Task&lt;PipelineResult&gt;&gt;[] nextJobs)
+                            {
+                                var result = await currentResult;
+
+                                return result switch
+                                {
+                                    ImportContext ctx =&gt; await RunAll(ctx, name, nextJobs),
+                                    Failure failure =&gt; failure,
+                                    NoItemsToProcess noItems =&gt; noItems,
+                                    null =&gt; throw new InvalidOperationException(&quot;PipelineResult cannot be null.&quot;)
+                                };
+                            }
+
+                            /// &lt;summary&gt;
+                            /// Sync Then — dla krok&#243;w synchronicznych.
+                            /// &lt;/summary&gt;
+                            public static async Task&lt;PipelineResult&gt; Then(
+                                this Task&lt;PipelineResult&gt; currentResult,
+                                Func&lt;ImportContext, PipelineResult&gt; nextJob)
+                            {
+                                var result = await currentResult;
+
+                                return result switch
+                                {
+                                    ImportContext ctx =&gt; nextJob(ctx),
+                                    Failure failure =&gt; failure,
+                                    NoItemsToProcess noItems =&gt; noItems,
+                                    null =&gt; throw new InvalidOperationException(&quot;PipelineResult cannot be null.&quot;)
+                                };
+                            }
+
+                            private static async Task&lt;PipelineResult&gt; RunAll(
+                                ImportContext ctx,
+                                string name,
+                                Func&lt;ImportContext, Task&lt;PipelineResult&gt;&gt;[] nextJobs)
+                            {
+                                if (nextJobs.Length == 0)
+                                    return ctx;
+
+                                var results = await Task.WhenAll(nextJobs.Select(nextJob =&gt; nextJob(ctx)));
+
+                                foreach (var result in results)
+                                {
+                                    switch (result)
+                                    {
+                                        case Failure failure:
+                                            return failure;
+                                        case NoItemsToProcess noItems:
+                                            return noItems;
+                                        case ImportContext:
+                                            break;
+                                        case null:
+                                            throw new InvalidOperationException($&quot;{name} returned null PipelineResult.&quot;);
+                                    }
+                                }
+
+                                return ctx;
+                            }
+                        }
 
                     </code>
                 </pre>
@@ -2386,7 +2759,16 @@
             </p>
         </div>
     </section>
-
+    <section class="slide layout-callout theme-dark">
+        <div class="callout-box">
+            <p>
+                Jeśli Twój proces ma: 
+            </p>
+            <p>
+                Widoczny flow, jawne rezultaty, wymienne kroki, eventy tylko jako skutki uboczne, osobny batch/item context, to jesteś blisko czytelnego kodu.
+            </p>
+        </div>
+    </section>
     <section class="slide theme-gradient-green fullscreen">
         <div class="layout-hero">
             <div class="hero-top"></div>
