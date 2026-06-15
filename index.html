@@ -181,7 +181,7 @@
             <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-                W Domain Driven Design mamy "Ubiquitous Language", czyli wspólny język między biznesem a programistami
+                W Domain Driven Design mamy <strong>"Ubiquitous Language"</strong>, czyli wspólny język między biznesem a programistami
                 <br /><br />
                 Tak żebyś wiedział, gdzie szukać tego w kodzie, gdy ktoś biznesowo opisze Ci problem z daną aplikacją
             </p>
@@ -321,7 +321,7 @@
             Kod nie był czytelny
         </span></span>
     </section>
-       <section class="slide theme-dark tag-darkblue  decor-corners2">
+       <section class="slide theme-dark tag-darkpurple  decor-corners2">
         <span class="shout colors"><span>
             Ale jak to? Przecież użyłem MediatR
         </span></span>
@@ -416,7 +416,7 @@
             </div>
         </div>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-triple">
         <span class="shout colors"><span>
             To zobaczmy, jak można to zrealizować w kodzie
         </span></span>
@@ -432,14 +432,13 @@
                     <ol class="nonumbers">
                         <li class="next">Będzie dostawać listę linków do plików CSV</li>
                         <li class="next">Coś przejdzie przez proces, coś nie przejdzie, coś przefiltruje wszystkie elementy i musimy wiedzieć, co i dlaczego</li>
-                        <li class="next">Wydzielić powtarzający się kod do frameworka i zostawić potrzebny potok</li>
-                        <li class="next">Proces nie będzie liniowy</li>
+                        <li class="next">Wydzielimy powtarzający się kod do frameworka</li>
                     </ol>
                 </ol>
             </div>
         </div>
     </section>
-        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <section class="slide theme-dark tag-darkpurple  decor-left-mid">
         <span class="shout colors"><span>
                 Istnieje wiele sposobów, aby to napisać
         </span></span>
@@ -474,7 +473,7 @@
             </p>
         </div>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-corners-glow">
         <span class="shout colors"><span>
             Oto mój przykład
         </span></span>
@@ -552,10 +551,10 @@
                             // cross-cutting
                             .Then&lt;StartTimingCommand&gt;()
                             // wsp&#243;lne kroki wejściowe
-                            .Then&lt;OpenFileCSVCommand&gt;()                           // → ctx.FileContext
-                            .Then&lt;ParseCsvCommand&gt;()                           // → ctx.ParsedFile
-                            .Then&lt;ValidateRowsCommand&gt;()                       // → ctx.ValidatedFile  | ctx.NoItemsReason
-                            .Then&lt;DeduplicationCommand&gt;()                      // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;OpenFileCSVCommand&gt;()      // → ctx.FileContext
+                            .Then&lt;ParseCsvCommand&gt;()         // → ctx.ParsedFile
+                            .Then&lt;ValidateRowsCommand&gt;()     // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;DeduplicationCommand&gt;()    // → ctx.ValidatedFile  | ctx.NoItemsReason
 
                             // rozgałęzienie per schemat
                             .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
@@ -1001,10 +1000,10 @@
                             .Then&lt;StartTimingCommand&gt;()
 
                             // wsp&#243;lne kroki wejściowe
-                            .Then&lt;OpenFileCSVCommand&gt;()                           // → ctx.FileContext
-                            .Then&lt;ParseCsvCommand&gt;()                           // → ctx.ParsedFile
-                            .Then&lt;ValidateRowsCommand&gt;()                       // → ctx.ValidatedFile  | ctx.NoItemsReason
-                            .Then&lt;DeduplicationCommand&gt;()                      // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;OpenFileCSVCommand&gt;()          // → ctx.FileContext
+                            .Then&lt;ParseCsvCommand&gt;()             // → ctx.ParsedFile
+                            .Then&lt;ValidateRowsCommand&gt;()         // → ctx.ValidatedFile  | ctx.NoItemsReason
+                            .Then&lt;DeduplicationCommand&gt;()        // → ctx.ValidatedFile  | ctx.NoItemsReason
 
                             // rozgałęzienie per schemat
                             .ThenBranch(&quot;SchemaRoute&quot;, branch =&gt; branch
@@ -1159,7 +1158,7 @@
                 Potok jest uruchamiany z zakresem "scoped"
         </span></span>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-right-stripe">
         <span class="shout colors"><span>
                 To, co pozwala na wymianę kolejności poleceń, to
         </span></span>
@@ -1213,7 +1212,7 @@
             </div>
         </div>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-left-mid">
         <span class="shout colors"><span>
                 Napisałem wiele wariantów tego kodu
         </span></span>
@@ -1221,14 +1220,14 @@
     <section class="slide layout-callout theme-dark">
         <div class="callout-box">
             <p>
-               Z wbudowaną obsługą "statystyk", "drukowania przepływu w konsoli" i "tworzenia pliku logu per nazwany pipeline z Serilog",
+               Z wbudowaną obsługą <strong>statystyk</strong>, <strong>drukowania przepływu w konsoli</strong> i <strong>tworzenia pliku logu per nazwany pipeline</strong> dzięki Serilog,
             </p>
             <p>
-               oraz z Circuit Breakerem, który blokuje cały pipeline, jeśli jest więcej błędów niż "N"
+               oraz z <strong>Circuit Breakerem</strong>, który blokuje cały pipeline, jeśli było wcześniej więcej błędów niż "N"
             </p>
         </div>
     </section>
-        <section class="slide theme-dark tag-darkblue  decor-corners2">
+        <section class="slide theme-dark tag-darkblue  decor-corners-glow">
         <span class="shout colors"><span>
                 Oto przykład handlera z Kafka Flow
         </span></span>
@@ -1241,6 +1240,7 @@
             <div class="code-body canscroll">
                 <pre style="font-size: 19px; overflow: hidden;">
                     <code style="line-height: 19px !important;" class="language-cs">
+
                         /// &lt;summary&gt;
                         /// KafkaFlow middleware for batched inventory sync messages.
                         /// Uses AddBatching + WithManualMessageCompletion.
@@ -1253,7 +1253,8 @@
                             private readonly ILogger&lt;InventorySyncBatchHandler&gt;    _logger;
                             private readonly PipelineLogsOptions _pipelineLogsOptions;
 
-                            public InventorySyncBatchHandler(InventoryPipelineFactory factory, ILogger&lt;InventorySyncBatchHandler&gt; logger, 
+                            public InventorySyncBatchHandler(InventoryPipelineFactory factory,
+                             ILogger&lt;InventorySyncBatchHandler&gt; logger, 
                                 PipelineLogsOptions pipelineLogsOptions)
                             {
                                 _factory = factory;
@@ -1264,7 +1265,9 @@
                             public async Task Invoke(IMessageContext context, MiddlewareDelegate next)
                             {
                                 var batch = context.GetMessagesBatch();
-                                _logger.LogInformation(&quot;Received inventory sync batch: {Count} messages&quot;, batch.Count);
+
+                                _logger.LogInformation
+                                (&quot;Received inventory sync batch: {Count} messages&quot;, batch.Count);
 
                                 var syncMessages = new List&lt;KafkaInventorySyncMessage&gt;();
 
@@ -1550,11 +1553,11 @@
                             public DateTime ProcessingStartedAt { get; set; } = DateTime.UtcNow;
                             public int      BatchSize           { get; set; }
 
-                            public List&lt;ProcessableInventoryItem&gt;                          Items          { get; set; } = new();
-                            public List&lt;ProcessableInventoryItem&gt;                          ValidatedItems { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;             Items          { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;             ValidatedItems { get; set; } = new();
                             public Dictionary&lt;string, List&lt;ProcessableInventoryItem&gt;&gt;      ByWarehouse    { get; set; } = new();
-                            public List&lt;ProcessableInventoryItem&gt;                          PersistedItems { get; set; } = new();
-                            public List&lt;ProcessableInventoryItem&gt;                          FailedItems    { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;             PersistedItems { get; set; } = new();
+                            public List&lt;ProcessableInventoryItem&gt;             FailedItems    { get; set; } = new();
                         }
                     </code>
                 </pre>
@@ -1593,7 +1596,7 @@
             <img class="cover" src="pictures/Flow.png" alt="screenshot" />
         </figure>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-corners-glow">
         <span class="shout colors"><span>
             Już ktoś przygotował rozwiązanie "funkcyjne" w C#
         </span></span>
@@ -1672,7 +1675,8 @@
                             /// &lt;summary&gt;
                             /// Then — wykonaj następny krok jeśli sukces, inaczej propaguj failure/empty.
                             /// &lt;/summary&gt;
-                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
+                            public static async 
+                            Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
                                 this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
                                 Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
                             {
@@ -1686,7 +1690,8 @@
                             /// &lt;summary&gt;
                             /// Then (async-safe) — wersja poprawnie awaitująca.
                             /// &lt;/summary&gt;
-                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; ThenAsync&lt;TSuccess, TFailure, TEmpty&gt;(
+                            public static async 
+                            Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; ThenAsync&lt;TSuccess, TFailure, TEmpty&gt;(
                                 this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
                                 Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
                             {
@@ -1701,7 +1706,8 @@
                             /// &lt;summary&gt;
                             /// IfThen — wykonaj krok TYLKO gdy predykat == true i jest sukces.
                             /// &lt;/summary&gt;
-                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; IfThen&lt;TSuccess, TFailure, TEmpty&gt;(
+                            public static async 
+                            Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; IfThen&lt;TSuccess, TFailure, TEmpty&gt;(
                                 this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
                                 Func&lt;TSuccess, bool&gt; condition,
                                 Func&lt;TSuccess, Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt;&gt; nextJob)
@@ -1720,7 +1726,8 @@
                             /// &lt;summary&gt;
                             /// Sync Then — dla krok&#243;w synchronicznych.
                             /// &lt;/summary&gt;
-                            public static async Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
+                            public static async 
+                            Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; Then&lt;TSuccess, TFailure, TEmpty&gt;(
                                 this Task&lt;OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; currentResult,
                                 Func&lt;TSuccess, OneOf&lt;TSuccess, TFailure, TEmpty&gt;&gt; nextJob)
                             {
@@ -1963,7 +1970,7 @@
             </div>
         </div>
     </section>
-                <section class="slide theme-dark tag-darkblue  decor-corners2">
+                <section class="slide theme-dark tag-darkblue  decor-corners-glow">
         <span class="shout colors"><span>
             Jest tutaj jedna duża róźnica
         </span></span>
@@ -2381,8 +2388,8 @@
                 <h2>MAF: workflow agentów w kodzie</h2>
             </div>
             <div class="code-body canscroll">
-                <pre style="font-size: 19px; overflow: hidden;">
-                    <code style="line-height: 19px !important;" class="language-cs">
+                <pre style="font-size: 14px; overflow: hidden;">
+                    <code style="line-height: 14px !important;" class="language-cs">
                         using AiContentTeam;
                         using AiContentTeam.Guardrails;
                         using AiContentTeam.Middleware;
@@ -2717,7 +2724,7 @@
             <img class="cover" src="pictures/maf.png" alt="screenshot" />
         </figure>
     </section>
-    <section class="slide theme-dark tag-darkblue  decor-corners2">
+    <section class="slide theme-dark tag-darkblue  decor-corners-glow">
         <span class="shout colors"><span>
                 A jeśli to za mało?
         </span></span>
